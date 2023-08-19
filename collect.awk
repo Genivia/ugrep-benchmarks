@@ -75,11 +75,6 @@ END {
   perf[cmd,opt,rex]="*fail*"
 }
 
-/^# / {
-  print
-  printf "\n"
-}
-
 /^## / {
   if (title!="" && ncmd>0 && nopt>0 && nrex>0) {
     printf "\n## results for %s\n",substr(title,4)
