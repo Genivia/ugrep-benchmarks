@@ -1,4 +1,4 @@
-# performane report
+# performance reports
 
 [performance report x64](#performance-report-x64)
 
