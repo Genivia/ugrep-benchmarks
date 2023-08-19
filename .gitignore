@@ -26,6 +26,18 @@
 *.a
 *.lib
 
+# Archives (only keep .zip)
+*.tar
+*.tgz
+*.bz2
+*.gz
+*.lz4
+*.xz
+*.zst
+
+# Dirs
+corpi/openssl-*/
+
 # Executables
 a.out
 
