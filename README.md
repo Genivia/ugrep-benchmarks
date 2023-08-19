@@ -50,7 +50,7 @@ Features:
   +jit +lzma +zlib
 ~~~
 
-found ggreo 263184 byte executable located at /usr/local/bin/ggrep
+found ggrep 263184 byte executable located at /usr/local/bin/ggrep
 ~~~
 ggrep (GNU grep) 3.11
 Packaged by Homebrew
@@ -332,7 +332,7 @@ Features:
   +jit +lzma +zlib
 ~~~
 
-found ggreo 266352 byte executable located at /opt/homebrew/bin/ggrep
+found ggrep 266352 byte executable located at /opt/homebrew/bin/ggrep
 ~~~
 ggrep (GNU grep) 3.11
 Packaged by Homebrew
