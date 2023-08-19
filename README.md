@@ -4,6 +4,28 @@
 
 [performance report arm64](#performance-report-arm64)
 
+Intel machine:
+~~~
+./install.sh # corpi dir expand source code repo and create archives to search
+./bench.sh > report_x64.md
+./collect.awk < report_x64.md
+~~~
+
+ARM64 machine:
+~~~
+./install.sh # corpi dir expand source code repo and create archives to search
+./bench.sh > report_arm64.md
+./collect.awk < report_arm64.md
+~~~
+
+The `install.sh` script requires the following compression utilities:
+
+- bzip2
+- gzip
+- lzip
+- xz
+- zstd
+
 # performance report x64
 
 found ugrep 1172664 byte executable located at /usr/local/bin/ugrep
