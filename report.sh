@@ -9,14 +9,14 @@ cat << 'END'
 
 Intel machine:
 ~~~
-./install.sh # corpi dir expand source code repo and create archives to search
+./install.sh # expand source code repo in corpi dir and create archives to search
 ./bench.sh > report_x64.md
 ./collect.awk < report_x64.md
 ~~~
 
 ARM64 machine:
 ~~~
-./install.sh # corpi dir expand source code repo and create archives to search
+./install.sh # expand source code repo in corpi dir and create archives to search
 ./bench.sh > report_arm64.md
 ./collect.awk < report_arm64.md
 ~~~
