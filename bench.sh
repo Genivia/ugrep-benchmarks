@@ -92,6 +92,25 @@ function run {
   fi
 }
 
+# search benchmark provably fails, report it
+function fail {
+  if [ "$1" != "-" ] ; then
+    # normalize arguments printout
+    sep='`'
+    for arg in "$@" ; do
+      if [ "$arg" == "" ] ; then
+        echo -n "$sep''"
+      else
+        echo -n "$sep$arg"
+      fi
+      sep=' '
+    done
+    echo '`'
+    echo '**ERROR!**'
+    echo
+  fi
+}
+
 echo 
 echo "## large text file search"
 echo
@@ -100,10 +119,10 @@ for REGEX in '' 'rol' 'cycles|semigroups' 'ab(cd?)?' '^$' ; do
   for OPTS in '' '-n' '-no' '-wn' '-win' '-wino' '-cwi' '-lwi' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT
-    run "$RG" $OPTS "$REGEX" $TEXT
-    run "$AG" $OPTS "$REGEX" $TEXT
-    run "$GG" $OPTS "$REGEX" $TEXT
+    run $UG $OPTS "$REGEX" $TEXT
+    run $RG $OPTS "$REGEX" $TEXT
+    run $AG $OPTS "$REGEX" $TEXT
+    run $GG $OPTS "$REGEX" $TEXT
   done
 done
 
@@ -115,9 +134,14 @@ for FILE in $WORD/* ; do
   for OPTS in '-n' '-no' '-wn' '-win' '-wino' '-cwi' '-lwi' ; do
     echo '### grepping `'"$OPTS '-f$FILE'"'`'
     echo
-    run "$UG" $OPTS -f"$FILE" $TEXT
-    run "$RG" $OPTS -f"$FILE" $TEXT
-    run "$GG" $OPTS -f"$FILE" $TEXT
+    run $UG $OPTS -f"$FILE" $TEXT
+    run $RG $OPTS -f"$FILE" $TEXT
+    # GNU grep takes about an hour on this one:
+    if [ "$FILE" != "$WORD/4.txt" ] ; then
+      run $GG $OPTS -f"$FILE" $TEXT
+    else
+      fail $GG $OPTS -f"$FILE" $TEXT
+    fi
   done
 done
 
@@ -129,9 +153,9 @@ for REGEX in 'Sherlock|Holmes' ; do
   for OPTS in '--json' '--csv' '--xml' '--hex' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT
-    run "$RG" $OPTS "$REGEX" $TEXT
-    run "$AG" $OPTS "$REGEX" $TEXT
+    run $UG $OPTS "$REGEX" $TEXT
+    run $RG $OPTS "$REGEX" $TEXT
+    run $AG $OPTS "$REGEX" $TEXT
   done
 done
 
@@ -141,8 +165,8 @@ echo
 
 echo '### grepping `--replace=flip flop`'
 echo
-run "$UG" "--replace=flip" flop $TEXT
-run "$RG" "--replace=flip" flop $TEXT
+run $UG "--replace=flip" flop $TEXT
+run $RG "--replace=flip" flop $TEXT
 
 echo 
 echo "## large text file search with context"
@@ -152,10 +176,10 @@ for REGEX in '^$' 'Sherlock|Holmes' ; do
   for OPTS in '-A1' '-B1' '-C1' '-winA1' '-winB1' '-winC1' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT
-    run "$RG" $OPTS "$REGEX" $TEXT
-    run "$AG" $OPTS "$REGEX" $TEXT
-    run "$GG" $OPTS "$REGEX" $TEXT
+    run $UG $OPTS "$REGEX" $TEXT
+    run $RG $OPTS "$REGEX" $TEXT
+    run $AG $OPTS "$REGEX" $TEXT
+    run $GG $OPTS "$REGEX" $TEXT
   done
 done
 
@@ -187,9 +211,9 @@ for REGEX in 'landsnail' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT.bz2
-    run "$RG" $OPTS "$REGEX" $TEXT.bz2
-    run "$AG" $OPTS "$REGEX" $TEXT.bz2
+    run $UG $OPTS "$REGEX" $TEXT.bz2
+    run $RG $OPTS "$REGEX" $TEXT.bz2
+    run $AG $OPTS "$REGEX" $TEXT.bz2
   done
 done
 
@@ -201,9 +225,9 @@ for REGEX in 'landsnail' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT.gz
-    run "$RG" $OPTS "$REGEX" $TEXT.gz
-    run "$AG" $OPTS "$REGEX" $TEXT.gz
+    run $UG $OPTS "$REGEX" $TEXT.gz
+    run $RG $OPTS "$REGEX" $TEXT.gz
+    run $AG $OPTS "$REGEX" $TEXT.gz
   done
 done
 
@@ -215,9 +239,9 @@ for REGEX in 'landsnail' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT.lz4
-    run "$RG" $OPTS "$REGEX" $TEXT.lz4
-    run "$AG" $OPTS "$REGEX" $TEXT.lz4
+    run $UG $OPTS "$REGEX" $TEXT.lz4
+    run $RG $OPTS "$REGEX" $TEXT.lz4
+    run $AG $OPTS "$REGEX" $TEXT.lz4
   done
 done
 
@@ -229,9 +253,9 @@ for REGEX in 'landsnail' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT.xz
-    run "$RG" $OPTS "$REGEX" $TEXT.xz
-    run "$AG" $OPTS "$REGEX" $TEXT.xz
+    run $UG $OPTS "$REGEX" $TEXT.xz
+    run $RG $OPTS "$REGEX" $TEXT.xz
+    run $AG $OPTS "$REGEX" $TEXT.xz
   done
 done
 
@@ -243,9 +267,9 @@ for REGEX in 'landsnail' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $TEXT.zst
-    run "$RG" $OPTS "$REGEX" $TEXT.zst
-    run "$AG" $OPTS "$REGEX" $TEXT.zst
+    run $UG $OPTS "$REGEX" $TEXT.zst
+    run $RG $OPTS "$REGEX" $TEXT.zst
+    run $AG $OPTS "$REGEX" $TEXT.zst
   done
 done
 
@@ -257,9 +281,9 @@ for REGEX in 'FIXME|TODO' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $REPO.zip
-    run "$RG" $OPTS "$REGEX" $REPO.zip
-    run "$AG" $OPTS "$REGEX" $REPO.zip
+    run $UG $OPTS "$REGEX" $REPO.zip
+    run $RG $OPTS "$REGEX" $REPO.zip
+    run $AG $OPTS "$REGEX" $REPO.zip
   done
 done
 
@@ -271,14 +295,12 @@ for REGEX in 'FIXME|TODO' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $REPO.tar
+    run $UG $OPTS "$REGEX" $REPO.tar
 #   wait, what???
-#   run "$RG" $OPTS "$REGEX" $REPO.tar
+#   run $RG $OPTS "$REGEX" $REPO.tar
 #   ripgrep searches tar as if it were a binary file without exiting with an error? That's not right!
-    echo '`'"$RG" $OPTS "$REGEX" $REPO.tar'`'
-    echo "**ERROR!**"
-    echo
-    run "$AG" $OPTS "$REGEX" $REPO.tar
+    fail $RG $OPTS "$REGEX" $REPO.tar
+    run $AG $OPTS "$REGEX" $REPO.tar
   done
 done
 
@@ -290,14 +312,12 @@ for REGEX in 'FIXME|TODO' ; do
   for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
-    run "$UG" $OPTS "$REGEX" $REPO.tgz
+    run $UG $OPTS "$REGEX" $REPO.tgz
 #   wait, what???
-#   run "$RG" $OPTS "$REGEX" $REPO.tgz
+#   run $RG $OPTS "$REGEX" $REPO.tgz
 #   ripgrep searches tar as if it were a binary file without exiting with an error? That's not right!
-    echo '`'"$RG" $OPTS "$REGEX" $REPO.tgz'`'
-    echo "**ERROR!**"
-    echo
-    run "$AG" $OPTS "$REGEX" $REPO.tgz
+    fail $RG $OPTS "$REGEX" $REPO.tgz
+    run $AG $OPTS "$REGEX" $REPO.tgz
   done
 done
 
