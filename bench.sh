@@ -56,7 +56,7 @@ if [ -x "$(which $GG)" ] && $GG --version 2>&1 | grep -qw 'GNU grep' ; then
   echo
 else
   if [ -x "$(which ggrep)" ] && ggrep --version 2>&1 | grep -qw 'GNU grep' ; then
-    stat -L -f "found ggreo %z byte executable located at %N" `which ggrep`
+    stat -L -f "found ggrep %z byte executable located at %N" `which ggrep`
     GG='ggrep -E'
     echo ~~~
     $GG --version
@@ -91,18 +91,6 @@ function run {
     echo
   fi
 }
-
-echo 'important notes'
-echo
-echo '- timing results are collected with the standard 10ms resolution; a lower resolution is unreliable due to the natural timing variations observed in the system'
-echo '- all timed runs are warm runs, cold runs are not timed'
-echo '- all timed runs of ugrep are performed without a .ugrep configuration file using the ugrep batch command'
-echo '- ripgrep and silver searcher skip binary files by default, whereas grep and ugrep do not and use option `-I` to skip binary files; we include option `-I` in recursive searches for a fair performance comparison'
-echo '- ripgrep does not search tar file contents, instead it may report *binary file matches (found "\0" byte around offset N)* without exiting with an error, so we report an error instead'
-echo '- ripgrep does not output 0 matches for option `-c`, whereas grep and ugrep output 0 matches as expected (note: ugrep option `-m1,` skips zero matches but is not used in this benchmark)'
-echo '- ugrep `-z` is more powerful than just decompressing a single file to search, it searches nested archives up to nesting depth `--zmax` (1 by default) by spawning one or more decompression theads; none of the other grep tools can search compressed tar files, nested archives and compressed files within archives'
-echo
-echo '**WARNING** performance results are meaningless when the host machine executes other tasks that load the CPU; quit all running applications first'
 
 echo 
 echo "## large text file search"

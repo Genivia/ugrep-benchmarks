@@ -31,7 +31,7 @@ the `install.sh` script requires the following compression utilities:
 
 important notes:
 
-- timing results are collected with the standard 10ms resolution; a lower resolution is unreliable due to the natural timing variations observed in the system
+- timing results are collected with the standard 10ms resolution; a lower resolution is unusable and a higher resolution is unreliable due to the natural timing variations observed in the system
 - all timed runs are warm runs, cold runs are not timed
 - all timed runs of ugrep are performed without a .ugrep configuration file using the ugrep batch command
 - ripgrep and silver searcher skip binary files by default, whereas grep and ugrep do not and use option `-I` to skip binary files; we include option `-I` in recursive searches for a fair performance comparison
