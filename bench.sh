@@ -184,7 +184,7 @@ echo "## bz2 compressed large text file search"
 echo
 
 for REGEX in 'landsnail' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $TEXT.bz2
@@ -198,7 +198,7 @@ echo "## gz compressed large text file search"
 echo
 
 for REGEX in 'landsnail' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $TEXT.gz
@@ -212,7 +212,7 @@ echo "## lz4 compressed large text file search"
 echo
 
 for REGEX in 'landsnail' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $TEXT.lz4
@@ -226,7 +226,7 @@ echo "## xz compressed large text file search"
 echo
 
 for REGEX in 'landsnail' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $TEXT.xz
@@ -240,7 +240,7 @@ echo "## zstd compressed large text file search"
 echo
 
 for REGEX in 'landsnail' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $TEXT.zst
@@ -254,7 +254,7 @@ echo "## zip archived repo search"
 echo
 
 for REGEX in 'FIXME|TODO' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $REPO.zip
@@ -268,7 +268,7 @@ echo "## tar archived repo search"
 echo
 
 for REGEX in 'FIXME|TODO' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $REPO.tar
@@ -287,7 +287,7 @@ echo "## compressed tarball search"
 echo
 
 for REGEX in 'FIXME|TODO' ; do
-  for OPTS in '-z' '-zwin' '-zc' ; do
+  for OPTS in '-z' '-zwin' '-zc' '-zwic' '-zl' '-zwil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run "$UG" $OPTS "$REGEX" $REPO.tgz
