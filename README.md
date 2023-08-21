@@ -83,7 +83,7 @@ grep -P uses PCRE2 10.42 2022-12-11
 
 grepping `''` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.12 |   0.17 |   0.17 |   0.17 |   0.17 |   0.17 |   0.07 |   0.00 |
 |     rg |   0.14 |   0.34 |  20.85 |   1.38 |   1.40 | *fail* |   0.98 |   0.01 |
@@ -92,7 +92,7 @@ grepping `''` elapsed real time (s)
 
 grepping `rol` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.03 |   0.03 |   0.03 |   0.02 |   0.03 |   0.03 |   0.03 |   0.01 |
 |     rg |   0.03 |   0.04 |   0.03 |   0.05 |   0.06 |   0.06 |   0.06 |   0.02 |
@@ -101,7 +101,7 @@ grepping `rol` elapsed real time (s)
 
 grepping `cycles|semigroups` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |   0.03 |   0.04 |   0.03 |   0.04 |   0.04 |   0.03 |   0.00 |
 |     rg |   0.03 |   0.03 |   0.03 |   0.26 |   0.07 |   0.07 |   0.06 |   0.01 |
@@ -110,7 +110,7 @@ grepping `cycles|semigroups` elapsed real time (s)
 
 grepping `ab(cd?)?` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.05 |   0.06 |   0.05 |   0.03 |   0.03 |   0.03 |   0.03 |   0.00 |
 |     rg |   0.10 |   0.11 |   0.14 |   0.11 |   0.11 |   0.12 |   0.12 |   0.01 |
@@ -119,7 +119,7 @@ grepping `ab(cd?)?` elapsed real time (s)
 
 grepping `^$` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.05 |   0.06 |   0.06 |   0.06 |   0.06 |   0.05 |   0.05 |   0.00 |
 |     rg |   0.20 |   0.24 |   0.26 |   0.37 |   0.37 |   0.79 |   0.32 |   0.01 |
@@ -130,7 +130,7 @@ grepping `^$` elapsed real time (s)
 
 grepping `-fwords/1.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.07 |   0.06 |   0.08 |   0.24 |   0.24 |   0.18 |   0.00 |
 |     rg |   0.08 |   0.09 |   0.17 |   0.31 |   2.64 |   0.20 |   0.01 |
@@ -138,7 +138,7 @@ grepping `-fwords/1.txt` elapsed real time (s)
 
 grepping `-fwords/2.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.26 |   0.25 |   0.25 |   0.28 |   0.27 |   0.28 |   0.00 |
 |     rg |   0.33 |  19.00 |   0.39 |   0.35 |   0.35 |   0.34 |   0.02 |
@@ -146,7 +146,7 @@ grepping `-fwords/2.txt` elapsed real time (s)
 
 grepping `-fwords/3.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.30 |   0.28 |   0.27 |   0.40 |   0.40 |   0.39 |   0.00 |
 |     rg |   1.97 |   2.36 |   0.39 |   0.42 |   0.41 |   0.40 |   0.04 |
@@ -154,7 +154,7 @@ grepping `-fwords/3.txt` elapsed real time (s)
 
 grepping `-fwords/4.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.25 |   0.24 |   0.28 |   0.54 |   0.53 |   0.50 |   0.02 |
 |     rg |   0.36 |   0.37 |   1.73 |   2.05 |   2.12 |   1.88 |   0.17 |
@@ -164,7 +164,7 @@ grepping `-fwords/4.txt` elapsed real time (s)
 
 grepping `Sherlock|Holmes` elapsed real time (s)
 
-| search | --json |  --csv |  --xml |  --hex |
+|        | --json |  --csv |  --xml |  --hex |
 | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.02 |   0.03 |   0.02 |   0.03 |
 |     rg |   0.03 | *fail* | *fail* | *fail* |
@@ -174,7 +174,7 @@ grepping `Sherlock|Holmes` elapsed real time (s)
 
 grepping `flop` elapsed real time (s)
 
-| search | --replace=flip |
+|        | --replace=flip |
 | -----: | -----: |
 |  ugrep |   0.03 |
 |     rg |   0.03 |
@@ -183,7 +183,7 @@ grepping `flop` elapsed real time (s)
 
 grepping `^$` elapsed real time (s)
 
-| search |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
+|        |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.06 |   0.06 |   0.06 |   0.06 |   0.06 |   0.06 |
 |     rg |   0.25 |   0.26 |   0.27 |   0.48 |   0.48 |   0.49 |
@@ -192,7 +192,7 @@ grepping `^$` elapsed real time (s)
 
 grepping `Sherlock|Holmes` elapsed real time (s)
 
-| search |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
+|        |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.09 |   0.13 |   0.13 |   0.10 |   0.14 |   0.14 |
 |     rg |   0.03 |   0.03 |   0.03 |   0.09 |   0.09 |   0.09 |
@@ -203,7 +203,7 @@ grepping `Sherlock|Holmes` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
+|        |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |        |   0.04 |        |   0.04 |        |   0.04 |        |   0.04 |        |   0.04 |        |
 |     rg |   0.03 |        |   0.04 |        |   0.05 |        |   0.05 |        |   0.04 |        |   0.05 |        |
@@ -212,7 +212,7 @@ grepping `FIXME|TODO` elapsed real time (s)
 
 grepping `char|int|long|size_t|void` elapsed real time (s)
 
-| search |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
+|        |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.05 |        |   0.05 |        |   0.05 |        |   0.05 |        |   0.05 |        |   0.04 |        |
 |     rg |   0.05 |        |   0.07 |        |   0.08 |        |   0.15 |        |   0.07 |        |   0.06 |        |
@@ -221,7 +221,7 @@ grepping `char|int|long|size_t|void` elapsed real time (s)
 
 grepping `ssl-?3(\.[0-9]+)?` elapsed real time (s)
 
-| search |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
+|        |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |        |   0.04 |        |   0.04 |        |   0.04 |        |   0.04 |        |   0.04 |        |
 |     rg |   0.03 |        |   0.04 |        |   0.07 |        |   0.07 |        |   0.07 |        |   0.07 |        |
@@ -232,7 +232,7 @@ grepping `ssl-?3(\.[0-9]+)?` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   3.23 |   3.23 |   3.24 |   3.38 |   0.50 |   0.51 |
 |     rg |   3.36 |   3.36 |   3.35 |   3.53 |   0.49 |   0.52 |
@@ -242,7 +242,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.49 |   0.49 |   0.50 |   0.50 |   0.07 |   0.07 |
 |     rg |   0.41 |   0.43 |   0.42 |   0.43 |   0.06 |   0.07 |
@@ -252,7 +252,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.10 |   0.09 |   0.10 |   0.09 |   0.02 |   0.02 |
 |     rg |   0.12 |   0.17 |   0.13 |   0.17 |   0.03 |   0.05 |
@@ -262,7 +262,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   1.45 |   1.45 |   1.47 |   1.44 |   0.21 |   0.21 |
 |     rg |   1.56 |   1.53 |   1.54 |   1.56 |   0.23 |   0.23 |
@@ -272,7 +272,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.19 |   0.20 |   0.19 |   0.19 |   0.03 |   0.03 |
 |     rg |   0.16 |   0.18 |   0.16 |   0.17 | *fail* |   0.04 |
@@ -282,7 +282,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.31 |   0.31 |   0.30 |   0.30 |   0.30 |   0.30 |
 |     rg | *fail* | *fail* | *fail* | *fail* | *fail* | *fail* |
@@ -292,7 +292,7 @@ grepping `FIXME|TODO` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.17 |   0.16 |   0.14 |   0.14 |   0.17 |   0.14 |
 |     rg | *fail* | *fail* | *fail* | *fail* | *fail* | *fail* |
@@ -302,7 +302,7 @@ grepping `FIXME|TODO` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.36 |   0.37 |   0.36 |   0.36 |   0.36 |   0.36 |
 |     rg | *fail* | *fail* | *fail* | *fail* | *fail* | *fail* |
@@ -354,7 +354,7 @@ grep -P uses PCRE2 10.42 2022-12-11
 
 grepping `''` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.08 |   0.10 |   0.10 |   0.10 |   0.10 |   0.10 |   0.05 |   0.00 |
 |     rg |   0.09 |   0.18 |   8.68 |   0.88 |   0.88 | *fail* |   0.75 |   0.00 |
@@ -363,7 +363,7 @@ grepping `''` elapsed real time (s)
 
 grepping `rol` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.03 |   0.03 |   0.03 |   0.02 |   0.02 |   0.02 |   0.02 |   0.00 |
 |     rg |   0.08 |   0.08 |   0.09 |   0.10 |   0.14 |   0.14 |   0.14 |   0.02 |
@@ -372,7 +372,7 @@ grepping `rol` elapsed real time (s)
 
 grepping `cycles|semigroups` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.03 |   0.03 |   0.03 |   0.03 |   0.03 |   0.03 |   0.03 |   0.00 |
 |     rg |   0.20 |   0.20 |   0.20 |   0.25 |   0.22 |   0.22 |   0.21 |   0.00 |
@@ -381,7 +381,7 @@ grepping `cycles|semigroups` elapsed real time (s)
 
 grepping `ab(cd?)?` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |   0.04 |   0.04 |   0.02 |   0.02 |   0.02 |   0.02 |   0.00 |
 |     rg |   0.13 |   0.14 |   0.18 |   0.11 |   0.21 |   0.21 |   0.20 |   0.00 |
@@ -390,7 +390,7 @@ grepping `ab(cd?)?` elapsed real time (s)
 
 grepping `^$` elapsed real time (s)
 
-| search | (none) |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |   0.04 |   0.04 |   0.04 |   0.04 |   0.04 |   0.03 |   0.00 |
 |     rg |   0.19 |   0.21 |   0.22 |   0.29 |   0.29 |   0.62 |   0.27 |   0.00 |
@@ -401,7 +401,7 @@ grepping `^$` elapsed real time (s)
 
 grepping `-fwords/1.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.05 |   0.05 |   0.05 |   0.21 |   0.21 |   0.18 |   0.00 |
 |     rg |   0.17 |   0.25 |   0.23 |   0.21 |   2.15 |   0.17 |   0.00 |
@@ -409,7 +409,7 @@ grepping `-fwords/1.txt` elapsed real time (s)
 
 grepping `-fwords/2.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.13 |   0.13 |   0.13 |   0.15 |   0.15 |   0.15 |   0.00 |
 |     rg |   0.17 |   7.67 |   0.31 |   0.27 |   0.27 |   0.27 |   0.01 |
@@ -417,7 +417,7 @@ grepping `-fwords/2.txt` elapsed real time (s)
 
 grepping `-fwords/3.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.15 |   0.15 |   0.14 |   0.24 |   0.24 |   0.23 |   0.00 |
 |     rg |   0.17 |   0.20 |   0.29 |   0.30 |   0.31 |   0.30 |   0.01 |
@@ -425,7 +425,7 @@ grepping `-fwords/3.txt` elapsed real time (s)
 
 grepping `-fwords/4.txt` elapsed real time (s)
 
-| search |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
+|        |     -n |    -no |    -wn |   -win |  -wino |   -cwi |   -lwi |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.20 |   0.19 |   0.20 |   0.33 |   0.33 |   0.33 |   0.01 |
 |     rg |   0.21 |   0.22 |   0.84 |   1.05 |   1.10 |   1.04 |   0.06 |
@@ -435,7 +435,7 @@ grepping `-fwords/4.txt` elapsed real time (s)
 
 grepping `Sherlock|Holmes` elapsed real time (s)
 
-| search | --json |  --csv |  --xml |  --hex |
+|        | --json |  --csv |  --xml |  --hex |
 | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.02 |   0.02 |   0.02 |   0.02 |
 |     rg |   0.03 | *fail* | *fail* | *fail* |
@@ -445,7 +445,7 @@ grepping `Sherlock|Holmes` elapsed real time (s)
 
 grepping `flop` elapsed real time (s)
 
-| search | --replace=flip |
+|        | --replace=flip |
 | -----: | -----: |
 |  ugrep |   0.02 |
 |     rg |   0.04 |
@@ -454,7 +454,7 @@ grepping `flop` elapsed real time (s)
 
 grepping `^$` elapsed real time (s)
 
-| search |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
+|        |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |   0.04 |   0.04 |   0.04 |   0.04 |   0.04 |
 |     rg |   0.22 |   0.23 |   0.23 |   0.33 |   0.34 |   0.35 |
@@ -463,7 +463,7 @@ grepping `^$` elapsed real time (s)
 
 grepping `Sherlock|Holmes` elapsed real time (s)
 
-| search |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
+|        |    -A1 |    -B1 |    -C1 | -winA1 | -winB1 | -winC1 |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.06 |   0.09 |   0.09 |   0.08 |   0.10 |   0.10 |
 |     rg |   0.03 |   0.03 |   0.03 |   0.23 |   0.23 |   0.23 |
@@ -474,7 +474,7 @@ grepping `Sherlock|Holmes` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
+|        |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |        |   0.04 |        |   0.05 |        |   0.04 |        |   0.04 |        |   0.04 |        |
 |     rg |   0.04 |        |   0.05 |        |   0.04 |        |   0.05 |        |   0.04 |        |   0.04 |        |
@@ -483,7 +483,7 @@ grepping `FIXME|TODO` elapsed real time (s)
 
 grepping `char|int|long|size_t|void` elapsed real time (s)
 
-| search |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
+|        |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |        |   0.05 |        |   0.04 |        |   0.04 |        |   0.04 |        |   0.04 |        |
 |     rg |   0.04 |        |   0.04 |        |   0.05 |        |   0.09 |        |   0.04 |        |   0.04 |        |
@@ -492,7 +492,7 @@ grepping `char|int|long|size_t|void` elapsed real time (s)
 
 grepping `ssl-?3(\.[0-9]+)?` elapsed real time (s)
 
-| search |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
+|        |     -n |    -nr |    -wn |   -wnr |   -win |  -winr |  -wino | -winor |   -cwi |  -cwir |   -lwi |  -lwir |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.04 |        |   0.04 |        |   0.04 |        |   0.05 |        |   0.04 |        |   0.04 |        |
 |     rg |   0.05 |        |   0.04 |        |   0.05 |        |   0.06 |        |   0.05 |        |   0.05 |        |
@@ -503,7 +503,7 @@ grepping `ssl-?3(\.[0-9]+)?` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   1.97 |   1.97 |   1.97 |   1.97 |   0.28 |   0.28 |
 |     rg |   2.20 |   2.01 |   2.00 |   2.00 |   0.27 |   0.29 |
@@ -513,7 +513,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.30 |   0.30 |   0.30 |   0.30 |   0.04 |   0.04 |
 |     rg |   0.29 |   0.30 |   0.29 |   0.30 |   0.04 |   0.04 |
@@ -523,7 +523,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.06 |   0.06 |   0.06 |   0.06 |   0.01 |   0.01 |
 |     rg |   0.11 |   0.17 |   0.11 |   0.16 |   0.02 |   0.03 |
@@ -533,7 +533,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   1.08 |   1.08 |   1.08 |   1.08 |   0.15 |   0.15 |
 |     rg |   1.12 |   1.12 |   1.12 |   1.12 |   0.15 |   0.16 |
@@ -543,7 +543,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `landsnail` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.14 |   0.14 |   0.14 |   0.14 |   0.02 |   0.02 |
 |     rg |   0.12 |   0.13 |   0.12 |   0.13 | *fail* | *fail* |
@@ -553,7 +553,7 @@ grepping `landsnail` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.20 |   0.20 |   0.19 |   0.19 |   0.19 |   0.19 |
 |     rg | *fail* | *fail* | *fail* | *fail* | *fail* | *fail* |
@@ -563,7 +563,7 @@ grepping `FIXME|TODO` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.09 |   0.09 |   0.08 |   0.08 |   0.07 |   0.07 |
 |     rg | *fail* | *fail* | *fail* | *fail* | *fail* | *fail* |
@@ -573,7 +573,7 @@ grepping `FIXME|TODO` elapsed real time (s)
 
 grepping `FIXME|TODO` elapsed real time (s)
 
-| search |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
+|        |     -z |  -zwin |    -zc |  -zwic |    -zl |  -zwil |
 | -----: | -----: | -----: | -----: | -----: | -----: | -----: |
 |  ugrep |   0.21 |   0.21 |   0.20 |   0.21 |   0.19 |   0.20 |
 |     rg | *fail* | *fail* | *fail* | *fail* | *fail* | *fail* |
