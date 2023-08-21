@@ -21,7 +21,7 @@ END {
       rex=$5
       if (substr(opt,1,1)!="-" || substr(opt,1,2)=="-f") {
         rex=opt
-        opt="(none)"
+        opt=""
       }
     }
     else {
@@ -29,7 +29,7 @@ END {
       rex=$4
       if (substr(opt,1,1)!="-" || substr(opt,1,2)=="-f") {
         rex=opt
-        opt="(none)"
+        opt=""
       }
     }
   }
@@ -38,7 +38,7 @@ END {
     rex=$4
     if (substr(opt,1,1)!="-" || substr(opt,1,2)=="-f") {
       rex=opt
-      opt="(none)"
+      opt=""
     }
   }
   else {
@@ -46,7 +46,7 @@ END {
     rex=$3
     if (substr(opt,1,1)!="-" || substr(opt,1,2)=="-f") {
       rex=opt
-      opt="(none)"
+      opt=""
     }
   }
   # remove trailing `
