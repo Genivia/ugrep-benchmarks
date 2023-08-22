@@ -3,7 +3,7 @@
 UG=${1:-ugrep}          # ugrep or script argument (e.g. to use a specific version)
 RG=rg                   # ripgrep
 AG=ag                   # silver searcher
-GG='egrep -E'           # GNU grep -E (egrep)
+GG='egrep'              # GNU grep -E (egrep)
 
 # source code repository to search and .zip, .tar, .tgz files
 REPO=corpi/openssl-3.1.2
@@ -115,7 +115,7 @@ echo
 echo "## large text file search"
 echo
 
-for REGEX in '' 'rol' 'cycles|semigroups' 'ab(cd?)?' '^$' ; do
+for REGEX in '' 'rol' 'cycles|semigroups' 'ab(cd?)?' 'ro[a-z]*ds' '(19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2}' '^$' ; do
   for OPTS in '' '-n' '-no' '-wn' '-win' '-wino' '-cwi' '-lwi' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
