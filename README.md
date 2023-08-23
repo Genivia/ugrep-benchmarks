@@ -38,7 +38,7 @@ important notes:
 - ripgrep does not search tar file contents, instead it may report *binary file matches (found "\0" byte around offset N)* without exiting with an error, so we report an error instead
 - ripgrep does not output 0 matches for option `-c`, whereas grep and ugrep output 0 matches as expected (note: ugrep option `-m1,` skips zero matches but is not used in this benchmark)
 - ugrep `-z` is more powerful than just decompressing a single file to search, it searches nested archives up to nesting depth `--zmax` (1 by default) by spawning one or more decompression theads; none of the other grep tools can search compressed tar files, nested archives and compressed files within archives
-- ugrep context options `-ABC` are sub-optimial because of double buffering (input buffer and context buffer), which will be optimized soon in a future release
+- ugrep context options `-ABC` are a bit sub-optimal because of double buffering (input buffer and context buffer), which will be optimized soon in a future release
 - ugrep line matching and option `-c` will be optimized in a future release; when matching lines, the idea is to skip to the next line when permitted instead of continuing matching on the same line, an optimization that is effectively performed by GNU grep and copied by other grep
 
 # performance report x64
