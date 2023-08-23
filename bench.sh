@@ -115,7 +115,11 @@ echo
 echo "## large text file search"
 echo
 
-for REGEX in '' 'rol' 'cycles|semigroups' 'ab(cd?)?' 'ro[a-z]*ds' '(19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2}' '^$' ; do
+for REGEX in '' 'rol' 'cycles|semigroups' 'ab(cd?)?' 'ro[a-z]*ds' \
+      '(19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2}' \
+      '(https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+' \
+      '^={2,4}[^=].*' \
+      '^$' ; do
   for OPTS in '' '-n' '-no' '-wn' '-win' '-wino' '-cwi' '-lwi' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
@@ -127,11 +131,11 @@ for REGEX in '' 'rol' 'cycles|semigroups' 'ab(cd?)?' 'ro[a-z]*ds' '(19|20)[0-9]{
 done
 
 echo 
-echo "## large text file search words from files"
+echo "## large text file search for words from files"
 echo
 
 for FILE in $WORD/* ; do
-  for OPTS in '-n' '-no' '-wn' '-win' '-wino' '-cwi' '-lwi' ; do
+  for OPTS in '' '-n' '-no' '-wn' '-win' '-wino' '-cwi' '-lwi' ; do
     echo '### grepping `'"$OPTS '-f$FILE'"'`'
     echo
     run $UG $OPTS -f"$FILE" $TEXT
@@ -320,6 +324,8 @@ for REGEX in 'FIXME|TODO' ; do
     run $AG $OPTS "$REGEX" $REPO.tgz
   done
 done
+
+# must end with a final ## section
 
 echo 
 echo "## end of report"
