@@ -1,5 +1,8 @@
 # performance reports
 
+Updated benchmarks are automatically generated and published when a new version of ugrep is released
+Last updated: 2023-08-23
+
 [performance report x64](#performance-report-x64)
 
 [performance report arm64](#performance-report-arm64)

@@ -1,8 +1,16 @@
 #!/bin/sh
 
-cat << 'END'
+# ugrep project auto-benchmarks https://github.com/Genivia/ugrep
+
+cat << END
 # performance reports
 
+Updated benchmarks are automatically generated and published when a new version of ugrep is released
+Last updated: `date "+%Y-%m-%d"`
+
+END
+
+cat << 'END'
 [performance report x64](#performance-report-x64)
 
 [performance report arm64](#performance-report-arm64)
