@@ -1,5 +1,7 @@
 #!/usr/bin/awk -f
 
+# ugrep project auto-benchmarks https://github.com/Genivia/ugrep
+
 BEGIN {
   FS=" "
   title=""
