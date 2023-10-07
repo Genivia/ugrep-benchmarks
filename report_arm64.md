@@ -1,8 +1,8 @@
 # performance report arm64
 
-found ugrep 1108274 byte executable located at /usr/local/bin/ugrep
+found ugrep 1110722 byte executable located at /usr/local/bin/ugrep
 ~~~
-ugrep 4.2.0 arm-apple-darwin21.6.0 +neon/AArch64 +pcre2jit +zlib +bzip2 +lzma +lz4 +zstd
+ugrep 4.3.0 arm-apple-darwin21.6.0 +neon/AArch64 +pcre2jit +zlib +bzip2 +lzma +lz4 +zstd
 License BSD-3-Clause: <https://opensource.org/licenses/BSD-3-Clause>
 Written by Robert van Engelen and others: <https://github.com/Genivia/ugrep>
 ~~~
@@ -74,7 +74,7 @@ user 0.07
 sys 0.01
 
 `ag -n rol corpi/enwik8`
-real 0.54
+real 0.53
 user 0.51
 sys 0.02
 
@@ -119,13 +119,13 @@ sys 0.01
 
 `ag -wn rol corpi/enwik8`
 real 0.40
-user 0.38
+user 0.37
 sys 0.02
 
 `ggrep -E -wn rol corpi/enwik8`
 real 0.13
 user 0.13
-sys 0.01
+sys 0.00
 
 ### grepping `-win 'rol'`
 
@@ -174,7 +174,7 @@ sys 0.01
 ### grepping `-c 'rol'`
 
 `ugrep -c rol corpi/enwik8`
-real 0.03
+real 0.02
 user 0.02
 sys 0.00
 
@@ -184,7 +184,7 @@ user 0.07
 sys 0.01
 
 `ag -c rol corpi/enwik8`
-real 0.17
+real 0.16
 user 0.14
 sys 0.02
 
@@ -206,9 +206,9 @@ user 0.13
 sys 0.01
 
 `ag -wic rol corpi/enwik8`
-real 0.17
+real 0.16
 user 0.14
-sys 0.02
+sys 0.01
 
 `ggrep -E -wic rol corpi/enwik8`
 real 0.36
@@ -228,7 +228,7 @@ user 0.00
 sys 0.00
 
 `ag -l rol corpi/enwik8`
-real 0.17
+real 0.16
 user 0.14
 sys 0.02
 
@@ -252,7 +252,7 @@ sys 0.00
 `ag -wil rol corpi/enwik8`
 real 0.16
 user 0.14
-sys 0.02
+sys 0.01
 
 `ggrep -E -wil rol corpi/enwik8`
 real 0.05
@@ -273,8 +273,8 @@ sys 0.02
 
 `ag the corpi/enwik8`
 real 1.94
-user 1.91
-sys 0.05
+user 1.90
+sys 0.04
 
 `ggrep -E the corpi/enwik8`
 real 0.10
@@ -300,7 +300,7 @@ sys 0.05
 
 `ggrep -E -n the corpi/enwik8`
 real 0.13
-user 0.11
+user 0.12
 sys 0.01
 
 ### grepping `-no 'the'`
@@ -339,7 +339,7 @@ sys 0.02
 
 `ag -wn the corpi/enwik8`
 real 1.89
-user 1.85
+user 1.86
 sys 0.04
 
 `ggrep -E -wn the corpi/enwik8`
@@ -387,9 +387,9 @@ user 0.78
 sys 0.02
 
 `ggrep -E -wino the corpi/enwik8`
-real 2.32
+real 2.33
 user 2.31
-sys 0.01
+sys 0.02
 
 ### grepping `-c 'the'`
 
@@ -448,7 +448,7 @@ user 0.00
 sys 0.00
 
 `ag -l the corpi/enwik8`
-real 0.21
+real 0.20
 user 0.18
 sys 0.02
 
@@ -493,7 +493,7 @@ sys 0.01
 
 `ag cycles|semigroups corpi/enwik8`
 real 0.52
-user 0.50
+user 0.49
 sys 0.02
 
 `ggrep -E cycles|semigroups corpi/enwik8`
@@ -506,7 +506,7 @@ sys 0.00
 `ugrep -n cycles|semigroups corpi/enwik8`
 real 0.03
 user 0.02
-sys 0.00
+sys 0.01
 
 `rg -n cycles|semigroups corpi/enwik8`
 real 0.20
@@ -550,7 +550,7 @@ sys 0.00
 `ugrep -wn cycles|semigroups corpi/enwik8`
 real 0.03
 user 0.02
-sys 0.01
+sys 0.00
 
 `rg -wn cycles|semigroups corpi/enwik8`
 real 0.25
@@ -558,14 +558,14 @@ user 0.24
 sys 0.01
 
 `ag -wn cycles|semigroups corpi/enwik8`
-real 0.51
+real 0.50
 user 0.48
 sys 0.02
 
 `ggrep -E -wn cycles|semigroups corpi/enwik8`
 real 0.26
 user 0.25
-sys 0.01
+sys 0.00
 
 ### grepping `-win 'cycles|semigroups'`
 
@@ -580,21 +580,21 @@ user 0.21
 sys 0.01
 
 `ag -win cycles|semigroups corpi/enwik8`
-real 0.51
+real 0.50
 user 0.48
 sys 0.02
 
 `ggrep -E -win cycles|semigroups corpi/enwik8`
 real 0.24
 user 0.23
-sys 0.01
+sys 0.00
 
 ### grepping `-wino 'cycles|semigroups'`
 
 `ugrep -wino cycles|semigroups corpi/enwik8`
 real 0.03
 user 0.03
-sys 0.00
+sys 0.01
 
 `rg -wino cycles|semigroups corpi/enwik8`
 real 0.22
@@ -616,7 +616,7 @@ sys 0.00
 `ugrep -c cycles|semigroups corpi/enwik8`
 real 0.03
 user 0.02
-sys 0.00
+sys 0.01
 
 `rg -c cycles|semigroups corpi/enwik8`
 real 0.20
@@ -631,7 +631,7 @@ sys 0.02
 `ggrep -E -c cycles|semigroups corpi/enwik8`
 real 0.15
 user 0.14
-sys 0.01
+sys 0.00
 
 ### grepping `-wic 'cycles|semigroups'`
 
@@ -646,14 +646,14 @@ user 0.20
 sys 0.01
 
 `ag -wic cycles|semigroups corpi/enwik8`
-real 0.27
+real 0.26
 user 0.24
 sys 0.02
 
 `ggrep -E -wic cycles|semigroups corpi/enwik8`
 real 0.22
 user 0.21
-sys 0.01
+sys 0.00
 
 ### grepping `-l 'cycles|semigroups'`
 
@@ -685,12 +685,12 @@ user 0.00
 sys 0.00
 
 `rg -wil cycles|semigroups corpi/enwik8`
-real 0.01
+real 0.00
 user 0.00
 sys 0.00
 
 `ag -wil cycles|semigroups corpi/enwik8`
-real 0.27
+real 0.26
 user 0.24
 sys 0.02
 
@@ -712,7 +712,7 @@ user 0.15
 sys 0.01
 
 `ag ro[a-z]*ds corpi/enwik8`
-real 0.43
+real 0.44
 user 0.41
 sys 0.02
 
@@ -734,7 +734,7 @@ user 0.15
 sys 0.01
 
 `ag -n ro[a-z]*ds corpi/enwik8`
-real 0.44
+real 0.43
 user 0.41
 sys 0.02
 
@@ -756,21 +756,21 @@ user 0.15
 sys 0.01
 
 `ag -no ro[a-z]*ds corpi/enwik8`
-real 0.42
+real 0.41
 user 0.39
 sys 0.02
 
 `ggrep -E -no ro[a-z]*ds corpi/enwik8`
 real 0.28
 user 0.27
-sys 0.00
+sys 0.01
 
 ### grepping `-wn 'ro[a-z]*ds'`
 
 `ugrep -wn ro[a-z]*ds corpi/enwik8`
 real 0.04
 user 0.04
-sys 0.01
+sys 0.00
 
 `rg -wn ro[a-z]*ds corpi/enwik8`
 real 0.21
@@ -791,7 +791,7 @@ sys 0.01
 
 `ugrep -win ro[a-z]*ds corpi/enwik8`
 real 0.04
-user 0.04
+user 0.03
 sys 0.01
 
 `rg -win ro[a-z]*ds corpi/enwik8`
@@ -813,7 +813,7 @@ sys 0.01
 
 `ugrep -wino ro[a-z]*ds corpi/enwik8`
 real 0.04
-user 0.04
+user 0.03
 sys 0.01
 
 `rg -wino ro[a-z]*ds corpi/enwik8`
@@ -835,8 +835,8 @@ sys 0.01
 
 `ugrep -c ro[a-z]*ds corpi/enwik8`
 real 0.04
-user 0.03
-sys 0.01
+user 0.04
+sys 0.00
 
 `rg -c ro[a-z]*ds corpi/enwik8`
 real 0.16
@@ -844,7 +844,7 @@ user 0.15
 sys 0.01
 
 `ag -c ro[a-z]*ds corpi/enwik8`
-real 0.18
+real 0.17
 user 0.15
 sys 0.02
 
@@ -866,7 +866,7 @@ user 0.25
 sys 0.01
 
 `ag -wic ro[a-z]*ds corpi/enwik8`
-real 0.16
+real 0.17
 user 0.14
 sys 0.02
 
@@ -888,7 +888,7 @@ user 0.00
 sys 0.00
 
 `ag -l ro[a-z]*ds corpi/enwik8`
-real 0.18
+real 0.17
 user 0.15
 sys 0.02
 
@@ -910,7 +910,7 @@ user 0.00
 sys 0.00
 
 `ag -wil ro[a-z]*ds corpi/enwik8`
-real 0.17
+real 0.16
 user 0.14
 sys 0.02
 
@@ -951,7 +951,7 @@ sys 0.01
 `rg -n ab(cd?)? corpi/enwik8`
 real 0.14
 user 0.13
-sys 0.02
+sys 0.01
 
 `ag -n ab(cd?)? corpi/enwik8`
 real 1.07
@@ -976,7 +976,7 @@ user 0.17
 sys 0.01
 
 `ag -no ab(cd?)? corpi/enwik8`
-real 0.56
+real 0.55
 user 0.53
 sys 0.02
 
@@ -988,7 +988,7 @@ sys 0.01
 ### grepping `-wn 'ab(cd?)?'`
 
 `ugrep -wn ab(cd?)? corpi/enwik8`
-real 0.02
+real 0.03
 user 0.02
 sys 0.00
 
@@ -1003,8 +1003,8 @@ user 0.43
 sys 0.02
 
 `ggrep -E -wn ab(cd?)? corpi/enwik8`
-real 0.21
-user 0.21
+real 0.22
+user 0.20
 sys 0.01
 
 ### grepping `-win 'ab(cd?)?'`
@@ -1025,8 +1025,8 @@ user 0.43
 sys 0.02
 
 `ggrep -E -win ab(cd?)? corpi/enwik8`
-real 1.10
-user 1.09
+real 1.09
+user 1.08
 sys 0.01
 
 ### grepping `-wino 'ab(cd?)?'`
@@ -1087,11 +1087,11 @@ sys 0.01
 
 `ag -wic ab(cd?)? corpi/enwik8`
 real 0.21
-user 0.18
+user 0.19
 sys 0.02
 
 `ggrep -E -wic ab(cd?)? corpi/enwik8`
-real 1.08
+real 1.07
 user 1.06
 sys 0.01
 
@@ -1144,7 +1144,7 @@ sys 0.00
 `ugrep x*y*z* corpi/enwik8`
 real 0.09
 user 0.08
-sys 0.02
+sys 0.01
 
 `rg x*y*z* corpi/enwik8`
 real 0.09
@@ -1152,9 +1152,9 @@ user 0.08
 sys 0.02
 
 `ag x*y*z* corpi/enwik8`
-real 3.96
-user 3.73
-sys 0.22
+real 3.92
+user 3.71
+sys 0.19
 
 `ggrep -E x*y*z* corpi/enwik8`
 real 0.11
@@ -1174,9 +1174,9 @@ user 0.16
 sys 0.03
 
 `ag -n x*y*z* corpi/enwik8`
-real 3.99
-user 3.77
-sys 0.20
+real 3.91
+user 3.71
+sys 0.19
 
 `ggrep -E -n x*y*z* corpi/enwik8`
 real 0.19
@@ -1186,24 +1186,24 @@ sys 0.02
 ### grepping `-no 'x*y*z*'`
 
 `ugrep -no x*y*z* corpi/enwik8`
-real 0.15
-user 0.14
+real 0.16
+user 0.15
 sys 0.01
 
 `rg -no x*y*z* corpi/enwik8`
-real 8.63
-user 8.56
-sys 0.32
+real 8.64
+user 8.55
+sys 0.31
 
 `ag -no x*y*z* corpi/enwik8`
-real 4.02
-user 3.79
-sys 0.22
+real 3.97
+user 3.78
+sys 0.19
 
 `ggrep -E -no x*y*z* corpi/enwik8`
-real 7.60
+real 7.59
 user 7.56
-sys 0.04
+sys 0.03
 
 ### grepping `-wn 'x*y*z*'`
 
@@ -1219,11 +1219,11 @@ sys 0.04
 
 `ag -wn x*y*z* corpi/enwik8`
 real 3.03
-user 2.95
+user 2.94
 sys 0.08
 
 `ggrep -E -wn x*y*z* corpi/enwik8`
-real 0.72
+real 0.73
 user 0.71
 sys 0.03
 
@@ -1237,7 +1237,7 @@ sys 0.01
 `rg -win x*y*z* corpi/enwik8`
 real 1.19
 user 1.17
-sys 0.05
+sys 0.04
 
 `ag -win x*y*z* corpi/enwik8`
 real 3.03
@@ -1261,12 +1261,12 @@ sys 0.01
 
 `ag -wino x*y*z* corpi/enwik8`
 real 3.03
-user 2.95
+user 2.94
 sys 0.08
 
 `ggrep -E -wino x*y*z* corpi/enwik8`
-real 17.78
-user 17.73
+real 17.81
+user 17.76
 sys 0.04
 
 ### grepping `-c 'x*y*z*'`
@@ -1282,8 +1282,8 @@ user 0.05
 sys 0.01
 
 `ag -c x*y*z* corpi/enwik8`
-real 3.75
-user 3.55
+real 3.68
+user 3.48
 sys 0.19
 
 `ggrep -E -c x*y*z* corpi/enwik8`
@@ -1299,12 +1299,12 @@ user 0.10
 sys 0.01
 
 `rg -wic x*y*z* corpi/enwik8`
-real 1.06
-user 1.05
+real 1.05
+user 1.04
 sys 0.01
 
 `ag -wic x*y*z* corpi/enwik8`
-real 2.78
+real 2.79
 user 2.70
 sys 0.07
 
@@ -1326,9 +1326,9 @@ user 0.00
 sys 0.00
 
 `ag -l x*y*z* corpi/enwik8`
-real 3.75
-user 3.55
-sys 0.19
+real 3.70
+user 3.49
+sys 0.20
 
 `ggrep -E -l x*y*z* corpi/enwik8`
 real 0.00
@@ -1349,8 +1349,8 @@ sys 0.00
 
 `ag -wil x*y*z* corpi/enwik8`
 real 2.79
-user 2.70
-sys 0.07
+user 2.71
+sys 0.08
 
 `ggrep -E -wil x*y*z* corpi/enwik8`
 real 0.00
@@ -1370,7 +1370,7 @@ user 0.04
 sys 0.01
 
 `ag (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
-real 0.38
+real 0.37
 user 0.35
 sys 0.02
 
@@ -1392,7 +1392,7 @@ user 0.05
 sys 0.01
 
 `ag -n (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
-real 0.37
+real 0.38
 user 0.35
 sys 0.02
 
@@ -1415,7 +1415,7 @@ sys 0.01
 
 `ag -no (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
 real 0.37
-user 0.34
+user 0.35
 sys 0.02
 
 `ggrep -E -no (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
@@ -1436,7 +1436,7 @@ user 0.13
 sys 0.01
 
 `ag -wn (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
-real 0.36
+real 0.37
 user 0.34
 sys 0.02
 
@@ -1503,7 +1503,7 @@ sys 0.01
 
 `ag -c (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
 real 0.13
-user 0.10
+user 0.11
 sys 0.02
 
 `ggrep -E -c (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
@@ -1547,7 +1547,7 @@ sys 0.00
 
 `ag -l (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
 real 0.13
-user 0.10
+user 0.11
 sys 0.02
 
 `ggrep -E -l (19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2} corpi/enwik8`
@@ -1594,8 +1594,8 @@ sys 0.02
 
 `ggrep -E (https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+ corpi/enwik8`
 real 3.40
-user 3.38
-sys 0.01
+user 3.39
+sys 0.02
 
 ### grepping `-n '(https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+'`
 
@@ -1614,7 +1614,7 @@ sys 0.02
 
 `ggrep -E -n (https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+ corpi/enwik8`
 real 3.42
-user 3.41
+user 3.40
 sys 0.01
 
 ### grepping `-no '(https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+'`
@@ -1693,8 +1693,8 @@ user 0.47
 sys 0.02
 
 `ggrep -E -wino (https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+ corpi/enwik8`
-real 7.45
-user 7.43
+real 7.44
+user 7.42
 sys 0.02
 
 ### grepping `-c '(https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+'`
@@ -1713,7 +1713,7 @@ user 0.17
 sys 0.02
 
 `ggrep -E -c (https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+ corpi/enwik8`
-real 3.40
+real 3.39
 user 3.38
 sys 0.01
 
@@ -1733,8 +1733,8 @@ user 0.17
 sys 0.02
 
 `ggrep -E -wic (https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+ corpi/enwik8`
-real 3.66
-user 3.64
+real 3.65
+user 3.63
 sys 0.01
 
 ### grepping `-l '(https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+'`
@@ -1769,7 +1769,7 @@ sys 0.00
 
 `ag -wil (https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+ corpi/enwik8`
 real 0.19
-user 0.16
+user 0.17
 sys 0.02
 
 `ggrep -E -wil (https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+ corpi/enwik8`
@@ -1797,7 +1797,7 @@ sys 0.02
 `ggrep -E ^={2,4}[^=].* corpi/enwik8`
 real 0.05
 user 0.05
-sys 0.01
+sys 0.00
 
 ### grepping `-n '^={2,4}[^=].*'`
 
@@ -1812,7 +1812,7 @@ user 0.04
 sys 0.01
 
 `ag -n ^={2,4}[^=].* corpi/enwik8`
-real 0.41
+real 0.42
 user 0.39
 sys 0.02
 
@@ -1871,7 +1871,7 @@ user 0.04
 sys 0.01
 
 `rg -win ^={2,4}[^=].* corpi/enwik8`
-real 0.10
+real 0.09
 user 0.08
 sys 0.01
 
@@ -1881,7 +1881,7 @@ sys 0.01
 `ggrep -E -win ^={2,4}[^=].* corpi/enwik8`
 real 0.08
 user 0.07
-sys 0.00
+sys 0.01
 
 ### grepping `-wino '^={2,4}[^=].*'`
 
@@ -1891,9 +1891,9 @@ user 0.04
 sys 0.01
 
 `rg -wino ^={2,4}[^=].* corpi/enwik8`
-real 2.91
+real 2.89
 user 2.87
-sys 0.03
+sys 0.02
 
 `ag -wino ^={2,4}[^=].* corpi/enwik8`
 **ERROR!**
@@ -1901,14 +1901,14 @@ sys 0.03
 `ggrep -E -wino ^={2,4}[^=].* corpi/enwik8`
 real 0.12
 user 0.11
-sys 0.00
+sys 0.01
 
 ### grepping `-c '^={2,4}[^=].*'`
 
 `ugrep -c ^={2,4}[^=].* corpi/enwik8`
 real 0.04
 user 0.03
-sys 0.00
+sys 0.01
 
 `rg -c ^={2,4}[^=].* corpi/enwik8`
 real 0.04
@@ -1958,7 +1958,7 @@ user 0.00
 sys 0.00
 
 `ag -l ^={2,4}[^=].* corpi/enwik8`
-real 0.14
+real 0.15
 user 0.12
 sys 0.02
 
@@ -2015,16 +2015,16 @@ user 0.08
 sys 0.02
 
 `rg -n '' corpi/enwik8`
-real 0.17
+real 0.18
 user 0.16
-sys 0.02
+sys 0.03
 
 `ag -n '' corpi/enwik8`
 **ERROR!**
 
 `ggrep -E -n '' corpi/enwik8`
-real 0.18
-user 0.17
+real 0.19
+user 0.18
 sys 0.02
 
 ### grepping `-no ''`
@@ -2035,15 +2035,15 @@ user 0.08
 sys 0.02
 
 `rg -no '' corpi/enwik8`
-real 8.67
+real 8.68
 user 8.60
-sys 0.32
+sys 0.30
 
 `ag -no '' corpi/enwik8`
 **ERROR!**
 
 `ggrep -E -no '' corpi/enwik8`
-real 7.44
+real 7.43
 user 7.40
 sys 0.03
 
@@ -2064,7 +2064,7 @@ sys 0.04
 
 `ggrep -E -wn '' corpi/enwik8`
 real 0.70
-user 0.69
+user 0.68
 sys 0.03
 
 ### grepping `-win ''`
@@ -2083,7 +2083,7 @@ sys 0.04
 **ERROR!**
 
 `ggrep -E -win '' corpi/enwik8`
-real 1.20
+real 1.19
 user 1.18
 sys 0.03
 
@@ -2101,8 +2101,8 @@ sys 0.02
 **ERROR!**
 
 `ggrep -E -wino '' corpi/enwik8`
-real 15.81
-user 15.77
+real 15.78
+user 15.73
 sys 0.04
 
 ### grepping `-c ''`
@@ -2110,7 +2110,7 @@ sys 0.04
 `ugrep -c '' corpi/enwik8`
 real 0.05
 user 0.04
-sys 0.00
+sys 0.01
 
 `rg -c '' corpi/enwik8`
 real 0.06
@@ -2180,9 +2180,9 @@ user 0.00
 sys 0.00
 
 `ag -wil '' corpi/enwik8`
-real 2.01
+real 2.03
 user 1.97
-sys 0.04
+sys 0.05
 
 `ggrep -E -wil '' corpi/enwik8`
 real 0.00
@@ -2194,7 +2194,7 @@ sys 0.00
 `ugrep ^$ corpi/enwik8`
 real 0.04
 user 0.03
-sys 0.00
+sys 0.01
 
 `rg ^$ corpi/enwik8`
 real 0.19
@@ -2202,7 +2202,7 @@ user 0.18
 sys 0.01
 
 `ag ^$ corpi/enwik8`
-real 0.40
+real 0.41
 user 0.38
 sys 0.02
 
@@ -2216,7 +2216,7 @@ sys 0.00
 `ugrep -n ^$ corpi/enwik8`
 real 0.05
 user 0.04
-sys 0.00
+sys 0.01
 
 `rg -n ^$ corpi/enwik8`
 real 0.21
@@ -2224,21 +2224,21 @@ user 0.20
 sys 0.01
 
 `ag -n ^$ corpi/enwik8`
-real 0.40
+real 0.41
 user 0.38
 sys 0.02
 
 `ggrep -E -n ^$ corpi/enwik8`
 real 0.09
 user 0.08
-sys 0.00
+sys 0.01
 
 ### grepping `-no '^$'`
 
 `ugrep -no ^$ corpi/enwik8`
 real 0.04
 user 0.03
-sys 0.00
+sys 0.01
 
 `rg -no ^$ corpi/enwik8`
 real 0.22
@@ -2260,7 +2260,7 @@ sys 0.00
 `ugrep -wn ^$ corpi/enwik8`
 real 0.05
 user 0.04
-sys 0.00
+sys 0.01
 
 `rg -wn ^$ corpi/enwik8`
 real 0.29
@@ -2271,8 +2271,8 @@ sys 0.01
 **ERROR!**
 
 `ggrep -E -wn ^$ corpi/enwik8`
-real 1.53
-user 1.52
+real 1.55
+user 1.53
 sys 0.01
 
 ### grepping `-win '^$'`
@@ -2280,7 +2280,7 @@ sys 0.01
 `ugrep -win ^$ corpi/enwik8`
 real 0.05
 user 0.04
-sys 0.00
+sys 0.01
 
 `rg -win ^$ corpi/enwik8`
 real 0.29
@@ -2292,15 +2292,15 @@ sys 0.01
 
 `ggrep -E -win ^$ corpi/enwik8`
 real 2.98
-user 2.97
-sys 0.01
+user 2.96
+sys 0.02
 
 ### grepping `-wino '^$'`
 
 `ugrep -wino ^$ corpi/enwik8`
 real 0.04
 user 0.03
-sys 0.00
+sys 0.01
 
 `rg -wino ^$ corpi/enwik8`
 real 0.61
@@ -2320,7 +2320,7 @@ sys 0.01
 `ugrep -c ^$ corpi/enwik8`
 real 0.04
 user 0.03
-sys 0.00
+sys 0.01
 
 `rg -c ^$ corpi/enwik8`
 real 0.19
@@ -2328,7 +2328,7 @@ user 0.18
 sys 0.01
 
 `ag -c ^$ corpi/enwik8`
-real 0.14
+real 0.15
 user 0.12
 sys 0.02
 
@@ -2342,7 +2342,7 @@ sys 0.00
 `ugrep -wic ^$ corpi/enwik8`
 real 0.04
 user 0.03
-sys 0.00
+sys 0.01
 
 `rg -wic ^$ corpi/enwik8`
 real 0.27
@@ -2355,7 +2355,7 @@ sys 0.01
 `ggrep -E -wic ^$ corpi/enwik8`
 real 2.95
 user 2.93
-sys 0.01
+sys 0.02
 
 ### grepping `-l '^$'`
 
@@ -2370,7 +2370,7 @@ user 0.00
 sys 0.00
 
 `ag -l ^$ corpi/enwik8`
-real 0.14
+real 0.15
 user 0.12
 sys 0.02
 
@@ -2427,7 +2427,7 @@ user 0.04
 sys 0.01
 
 `rg -n -fwords/1.txt corpi/enwik8`
-real 0.17
+real 0.18
 user 0.16
 sys 0.02
 
@@ -2439,9 +2439,9 @@ sys 0.01
 ### grepping `-no '-fwords/1.txt'`
 
 `ugrep -no -fwords/1.txt corpi/enwik8`
-real 0.04
+real 0.05
 user 0.04
-sys 0.00
+sys 0.01
 
 `rg -no -fwords/1.txt corpi/enwik8`
 real 0.25
@@ -2451,7 +2451,7 @@ sys 0.01
 `ggrep -E -no -fwords/1.txt corpi/enwik8`
 real 0.13
 user 0.12
-sys 0.00
+sys 0.01
 
 ### grepping `-wn '-fwords/1.txt'`
 
@@ -2479,7 +2479,7 @@ sys 0.01
 
 `rg -win -fwords/1.txt corpi/enwik8`
 real 0.21
-user 0.19
+user 0.20
 sys 0.02
 
 `ggrep -E -win -fwords/1.txt corpi/enwik8`
@@ -2497,11 +2497,11 @@ sys 0.01
 `rg -wino -fwords/1.txt corpi/enwik8`
 real 2.14
 user 2.13
-sys 0.01
+sys 0.02
 
 `ggrep -E -wino -fwords/1.txt corpi/enwik8`
 real 2.44
-user 2.43
+user 2.42
 sys 0.01
 
 ### grepping `-c '-fwords/1.txt'`
@@ -2514,7 +2514,7 @@ sys 0.00
 `rg -c -fwords/1.txt corpi/enwik8`
 real 0.15
 user 0.14
-sys 0.00
+sys 0.01
 
 `ggrep -E -c -fwords/1.txt corpi/enwik8`
 real 0.07
@@ -2577,7 +2577,7 @@ sys 0.00
 `ugrep -fwords/2.txt corpi/enwik8`
 real 0.13
 user 0.12
-sys 0.00
+sys 0.01
 
 `rg -fwords/2.txt corpi/enwik8`
 real 0.09
@@ -2611,12 +2611,12 @@ sys 0.01
 `ugrep -no -fwords/2.txt corpi/enwik8`
 real 0.13
 user 0.12
-sys 0.00
+sys 0.01
 
 `rg -no -fwords/2.txt corpi/enwik8`
 real 7.66
 user 7.59
-sys 0.31
+sys 0.30
 
 `ggrep -E -no -fwords/2.txt corpi/enwik8`
 real 0.66
@@ -2628,7 +2628,7 @@ sys 0.01
 `ugrep -wn -fwords/2.txt corpi/enwik8`
 real 0.13
 user 0.12
-sys 0.00
+sys 0.01
 
 `rg -wn -fwords/2.txt corpi/enwik8`
 real 0.31
@@ -2662,7 +2662,7 @@ sys 0.01
 `ugrep -wino -fwords/2.txt corpi/enwik8`
 real 0.15
 user 0.14
-sys 0.00
+sys 0.01
 
 `rg -wino -fwords/2.txt corpi/enwik8`
 real 0.27
@@ -2679,7 +2679,7 @@ sys 0.01
 `ugrep -c -fwords/2.txt corpi/enwik8`
 real 0.13
 user 0.12
-sys 0.00
+sys 0.01
 
 `rg -c -fwords/2.txt corpi/enwik8`
 real 0.05
@@ -2696,7 +2696,7 @@ sys 0.01
 `ugrep -wic -fwords/2.txt corpi/enwik8`
 real 0.15
 user 0.14
-sys 0.00
+sys 0.01
 
 `rg -wic -fwords/2.txt corpi/enwik8`
 real 0.27
@@ -2706,7 +2706,7 @@ sys 0.01
 `ggrep -E -wic -fwords/2.txt corpi/enwik8`
 real 0.30
 user 0.29
-sys 0.00
+sys 0.01
 
 ### grepping `-l '-fwords/2.txt'`
 
@@ -2750,7 +2750,7 @@ user 0.13
 sys 0.01
 
 `rg -fwords/3.txt corpi/enwik8`
-real 0.17
+real 0.16
 user 0.15
 sys 0.01
 
@@ -2772,7 +2772,7 @@ user 0.16
 sys 0.01
 
 `ggrep -E -n -fwords/3.txt corpi/enwik8`
-real 0.91
+real 0.90
 user 0.89
 sys 0.01
 
@@ -2801,7 +2801,7 @@ user 0.13
 sys 0.01
 
 `rg -wn -fwords/3.txt corpi/enwik8`
-real 0.28
+real 0.29
 user 0.28
 sys 0.01
 
@@ -2823,8 +2823,8 @@ user 0.29
 sys 0.01
 
 `ggrep -E -win -fwords/3.txt corpi/enwik8`
-real 6.31
-user 6.29
+real 6.28
+user 6.27
 sys 0.01
 
 ### grepping `-wino '-fwords/3.txt'`
@@ -2840,8 +2840,8 @@ user 0.30
 sys 0.01
 
 `ggrep -E -wino -fwords/3.txt corpi/enwik8`
-real 6.52
-user 6.51
+real 6.51
+user 6.49
 sys 0.01
 
 ### grepping `-c '-fwords/3.txt'`
@@ -2874,9 +2874,9 @@ user 0.29
 sys 0.01
 
 `ggrep -E -wic -fwords/3.txt corpi/enwik8`
-real 6.30
-user 6.28
-sys 0.02
+real 6.26
+user 6.25
+sys 0.01
 
 ### grepping `-l '-fwords/3.txt'`
 
@@ -2921,7 +2921,7 @@ sys 0.01
 
 `rg -fwords/4.txt corpi/enwik8`
 real 0.21
-user 0.20
+user 0.19
 sys 0.01
 
 `ggrep -E -fwords/4.txt corpi/enwik8`
@@ -2966,7 +2966,7 @@ sys 0.01
 
 `rg -wn -fwords/4.txt corpi/enwik8`
 real 0.84
-user 0.82
+user 0.83
 sys 0.01
 
 `ggrep -E -wn -fwords/4.txt corpi/enwik8`
@@ -2976,7 +2976,7 @@ sys 0.01
 
 `ugrep -win -fwords/4.txt corpi/enwik8`
 real 0.32
-user 0.30
+user 0.31
 sys 0.01
 
 `rg -win -fwords/4.txt corpi/enwik8`
@@ -3145,7 +3145,7 @@ sys 0.00
 
 `ugrep -A1 ^$ corpi/enwik8`
 real 0.10
-user 0.09
+user 0.08
 sys 0.01
 
 `rg -A1 ^$ corpi/enwik8`
@@ -3232,10 +3232,10 @@ sys 0.03
 `ugrep -winB1 ^$ corpi/enwik8`
 real 0.13
 user 0.11
-sys 0.02
+sys 0.01
 
 `rg -winB1 ^$ corpi/enwik8`
-real 0.35
+real 0.34
 user 0.33
 sys 0.03
 
@@ -3245,14 +3245,14 @@ sys 0.03
 `ggrep -E -winB1 ^$ corpi/enwik8`
 real 3.06
 user 3.04
-sys 0.03
+sys 0.04
 
 ### grepping `-winC1 '^$'`
 
 `ugrep -winC1 ^$ corpi/enwik8`
 real 0.13
 user 0.11
-sys 0.01
+sys 0.02
 
 `rg -winC1 ^$ corpi/enwik8`
 real 0.35
@@ -3263,7 +3263,7 @@ sys 0.03
 **ERROR!**
 
 `ggrep -E -winC1 ^$ corpi/enwik8`
-real 3.06
+real 3.05
 user 3.03
 sys 0.04
 
@@ -3303,7 +3303,7 @@ sys 0.00
 
 `ag -B1 Sherlock|Holmes corpi/enwik8`
 real 0.41
-user 0.38
+user 0.39
 sys 0.02
 
 `ggrep -E -B1 Sherlock|Holmes corpi/enwik8`
@@ -3325,7 +3325,7 @@ sys 0.00
 
 `ag -C1 Sherlock|Holmes corpi/enwik8`
 real 0.41
-user 0.38
+user 0.39
 sys 0.02
 
 `ggrep -E -C1 Sherlock|Holmes corpi/enwik8`
@@ -3338,7 +3338,7 @@ sys 0.00
 `ugrep -winA1 Sherlock|Holmes corpi/enwik8`
 real 0.08
 user 0.07
-sys 0.00
+sys 0.01
 
 `rg -winA1 Sherlock|Holmes corpi/enwik8`
 real 0.23
@@ -3358,8 +3358,8 @@ sys 0.00
 ### grepping `-winB1 'Sherlock|Holmes'`
 
 `ugrep -winB1 Sherlock|Holmes corpi/enwik8`
-real 0.11
-user 0.10
+real 0.10
+user 0.09
 sys 0.01
 
 `rg -winB1 Sherlock|Holmes corpi/enwik8`
@@ -3368,20 +3368,20 @@ user 0.22
 sys 0.01
 
 `ag -winB1 Sherlock|Holmes corpi/enwik8`
-real 0.58
+real 0.59
 user 0.56
 sys 0.02
 
 `ggrep -E -winB1 Sherlock|Holmes corpi/enwik8`
-real 0.24
+real 0.23
 user 0.23
-sys 0.01
+sys 0.00
 
 ### grepping `-winC1 'Sherlock|Holmes'`
 
 `ugrep -winC1 Sherlock|Holmes corpi/enwik8`
 real 0.10
-user 0.10
+user 0.09
 sys 0.01
 
 `rg -winC1 Sherlock|Holmes corpi/enwik8`
@@ -3397,7 +3397,7 @@ sys 0.02
 `ggrep -E -winC1 Sherlock|Holmes corpi/enwik8`
 real 0.23
 user 0.23
-sys 0.01
+sys 0.00
 
 
 ## large long lines JSON file search
@@ -3416,7 +3416,7 @@ sys 0.02
 
 `ag 99 corpi/large.json`
 real 2.43
-user 2.39
+user 2.40
 sys 0.05
 
 `ggrep -E 99 corpi/large.json`
@@ -3438,7 +3438,7 @@ sys 0.02
 
 `ag -n 99 corpi/large.json`
 real 2.43
-user 2.39
+user 2.40
 sys 0.05
 
 `ggrep -E -n 99 corpi/large.json`
@@ -3481,7 +3481,7 @@ user 0.07
 sys 0.01
 
 `ag -wn 99 corpi/large.json`
-real 2.17
+real 2.18
 user 2.14
 sys 0.05
 
@@ -3505,7 +3505,7 @@ sys 0.01
 `ag -win 99 corpi/large.json`
 real 2.17
 user 2.14
-sys 0.04
+sys 0.05
 
 `ggrep -E -win 99 corpi/large.json`
 real 0.77
@@ -3522,7 +3522,7 @@ sys 0.00
 `rg -wino 99 corpi/large.json`
 real 0.23
 user 0.22
-sys 0.01
+sys 0.00
 
 `ag -wino 99 corpi/large.json`
 real 0.78
@@ -3532,7 +3532,7 @@ sys 0.02
 `ggrep -E -wino 99 corpi/large.json`
 real 2.80
 user 2.78
-sys 0.02
+sys 0.01
 
 ### grepping `-c '99'`
 
@@ -3548,7 +3548,7 @@ sys 0.00
 
 `ag -c 99 corpi/large.json`
 real 0.23
-user 0.20
+user 0.21
 sys 0.02
 
 `ggrep -E -c 99 corpi/large.json`
@@ -3625,7 +3625,7 @@ sys 0.00
 ### grepping ` 'abc[a-z0-9]+'`
 
 `ugrep abc[a-z0-9]+ corpi/large.json`
-real 0.03
+real 0.04
 user 0.02
 sys 0.01
 
@@ -3635,7 +3635,7 @@ user 0.05
 sys 0.01
 
 `ag abc[a-z0-9]+ corpi/large.json`
-real 1.39
+real 1.38
 user 1.35
 sys 0.04
 
@@ -3657,9 +3657,9 @@ user 0.05
 sys 0.01
 
 `ag -n abc[a-z0-9]+ corpi/large.json`
-real 1.39
+real 1.38
 user 1.35
-sys 0.04
+sys 0.03
 
 `ggrep -E -n abc[a-z0-9]+ corpi/large.json`
 real 0.14
@@ -3680,7 +3680,7 @@ sys 0.00
 
 `ag -no abc[a-z0-9]+ corpi/large.json`
 real 0.53
-user 0.50
+user 0.51
 sys 0.02
 
 `ggrep -E -no abc[a-z0-9]+ corpi/large.json`
@@ -3746,7 +3746,7 @@ sys 0.00
 
 `ag -wino abc[a-z0-9]+ corpi/large.json`
 real 0.35
-user 0.33
+user 0.32
 sys 0.02
 
 `ggrep -E -wino abc[a-z0-9]+ corpi/large.json`
@@ -3862,7 +3862,7 @@ sys 0.32
 `ag -nr FIXME|TODO`
 real 0.04
 user 0.07
-sys 0.17
+sys 0.18
 
 `ggrep -E -I -nr FIXME|TODO .`
 real 0.10
@@ -3879,15 +3879,15 @@ sys 0.06
 `rg -wn FIXME|TODO`
 real 0.05
 user 0.05
-sys 0.30
+sys 0.32
 
 `ag -wnr FIXME|TODO`
 real 0.04
 user 0.07
-sys 0.17
+sys 0.18
 
 `ggrep -E -I -wnr FIXME|TODO .`
-real 0.12
+real 0.11
 user 0.07
 sys 0.04
 
@@ -3901,12 +3901,12 @@ sys 0.06
 `rg -win FIXME|TODO`
 real 0.04
 user 0.16
-sys 0.16
+sys 0.17
 
 `ag -winr FIXME|TODO`
 real 0.04
 user 0.13
-sys 0.14
+sys 0.13
 
 `ggrep -E -I -winr FIXME|TODO .`
 real 0.17
@@ -3923,16 +3923,16 @@ sys 0.06
 `rg -wino FIXME|TODO`
 real 0.04
 user 0.16
-sys 0.18
+sys 0.15
 
 `ag -winor FIXME|TODO`
 real 0.04
-user 0.13
-sys 0.13
+user 0.14
+sys 0.15
 
 `ggrep -E -I -winor FIXME|TODO .`
 real 0.17
-user 0.12
+user 0.13
 sys 0.04
 
 ### grepping `-wic 'FIXME|TODO'`
@@ -3940,12 +3940,12 @@ sys 0.04
 `ugrep -I -wic FIXME|TODO`
 real 0.03
 user 0.04
-sys 0.09
+sys 0.08
 
 `rg -wic FIXME|TODO`
 real 0.04
 user 0.15
-sys 0.16
+sys 0.17
 
 `ag -wicr FIXME|TODO`
 real 0.04
@@ -3965,31 +3965,31 @@ user 0.03
 sys 0.06
 
 `rg -wil FIXME|TODO`
-real 0.04
+real 0.05
 user 0.15
-sys 0.18
+sys 0.22
 
 `ag -wilr FIXME|TODO`
 real 0.04
 user 0.13
-sys 0.13
+sys 0.15
 
 `ggrep -E -I -wilr FIXME|TODO .`
 real 0.15
 user 0.10
-sys 0.04
+sys 0.05
 
 ### grepping `-n 'char|int|long|size_t|void'`
 
 `ugrep -I -n char|int|long|size_t|void`
 real 0.04
 user 0.07
-sys 0.08
+sys 0.07
 
 `rg -n char|int|long|size_t|void`
 real 0.04
 user 0.15
-sys 0.17
+sys 0.16
 
 `ag -nr char|int|long|size_t|void`
 real 0.32
@@ -3999,7 +3999,7 @@ sys 0.10
 `ggrep -E -I -nr char|int|long|size_t|void .`
 real 0.16
 user 0.11
-sys 0.05
+sys 0.04
 
 ### grepping `-wn 'char|int|long|size_t|void'`
 
@@ -4009,19 +4009,19 @@ user 0.07
 sys 0.07
 
 `rg -wn char|int|long|size_t|void`
-real 0.05
+real 0.04
 user 0.20
-sys 0.17
+sys 0.16
 
 `ag -wnr char|int|long|size_t|void`
 real 0.23
 user 0.40
-sys 0.10
+sys 0.09
 
 `ggrep -E -I -wnr char|int|long|size_t|void .`
 real 0.21
 user 0.16
-sys 0.05
+sys 0.04
 
 ### grepping `-win 'char|int|long|size_t|void'`
 
@@ -4031,19 +4031,19 @@ user 0.09
 sys 0.07
 
 `rg -win char|int|long|size_t|void`
-real 0.05
+real 0.06
 user 0.23
-sys 0.18
+sys 0.16
 
 `ag -winr char|int|long|size_t|void`
 real 0.23
 user 0.40
-sys 0.10
+sys 0.09
 
 `ggrep -E -I -winr char|int|long|size_t|void .`
 real 0.31
-user 0.26
-sys 0.05
+user 0.27
+sys 0.04
 
 ### grepping `-wino 'char|int|long|size_t|void'`
 
@@ -4053,19 +4053,19 @@ user 0.09
 sys 0.07
 
 `rg -wino char|int|long|size_t|void`
-real 0.10
+real 0.09
 user 0.64
-sys 0.19
+sys 0.15
 
 `ag -winor char|int|long|size_t|void`
 real 0.18
-user 0.35
+user 0.36
 sys 0.10
 
 `ggrep -E -I -winor char|int|long|size_t|void .`
-real 0.43
+real 0.42
 user 0.37
-sys 0.05
+sys 0.04
 
 ### grepping `-wic 'char|int|long|size_t|void'`
 
@@ -4077,37 +4077,37 @@ sys 0.08
 `rg -wic char|int|long|size_t|void`
 real 0.05
 user 0.22
-sys 0.18
+sys 0.17
 
 `ag -wicr char|int|long|size_t|void`
 real 0.05
 user 0.24
-sys 0.10
+sys 0.09
 
 `ggrep -E -I -wicr char|int|long|size_t|void .`
 real 0.28
-user 0.23
-sys 0.05
+user 0.24
+sys 0.04
 
 ### grepping `-wil 'char|int|long|size_t|void'`
 
 `ugrep -I -wil char|int|long|size_t|void`
 real 0.03
 user 0.05
-sys 0.08
+sys 0.07
 
 `rg -wil char|int|long|size_t|void`
 real 0.04
-user 0.12
-sys 0.16
+user 0.13
+sys 0.17
 
 `ag -wilr char|int|long|size_t|void`
 real 0.05
 user 0.24
-sys 0.10
+sys 0.09
 
 `ggrep -E -I -wilr char|int|long|size_t|void .`
-real 0.13
+real 0.12
 user 0.08
 sys 0.04
 
@@ -4119,14 +4119,14 @@ user 0.03
 sys 0.06
 
 `rg -n ssl-?3(\.[0-9]+)?`
-real 0.05
+real 0.07
 user 0.04
-sys 0.36
+sys 0.43
 
 `ag -nr ssl-?3(\.[0-9]+)?`
 real 0.04
 user 0.09
-sys 0.13
+sys 0.14
 
 `ggrep -E -I -nr ssl-?3(\.[0-9]+)? .`
 real 0.09
@@ -4141,17 +4141,17 @@ user 0.03
 sys 0.06
 
 `rg -wn ssl-?3(\.[0-9]+)?`
-real 0.05
+real 0.06
 user 0.06
-sys 0.31
+sys 0.41
 
 `ag -wnr ssl-?3(\.[0-9]+)?`
 real 0.04
 user 0.09
-sys 0.19
+sys 0.17
 
 `ggrep -E -I -wnr ssl-?3(\.[0-9]+)? .`
-real 0.10
+real 0.09
 user 0.05
 sys 0.04
 
@@ -4163,17 +4163,17 @@ user 0.03
 sys 0.06
 
 `rg -win ssl-?3(\.[0-9]+)?`
-real 0.06
+real 0.05
 user 0.20
-sys 0.18
+sys 0.20
 
 `ag -winr ssl-?3(\.[0-9]+)?`
 real 0.04
 user 0.09
-sys 0.15
+sys 0.17
 
 `ggrep -E -I -winr ssl-?3(\.[0-9]+)? .`
-real 0.11
+real 0.10
 user 0.06
 sys 0.04
 
@@ -4185,14 +4185,14 @@ user 0.03
 sys 0.06
 
 `rg -wino ssl-?3(\.[0-9]+)?`
-real 0.04
+real 0.05
 user 0.20
-sys 0.13
+sys 0.15
 
 `ag -winor ssl-?3(\.[0-9]+)?`
 real 0.04
 user 0.09
-sys 0.16
+sys 0.19
 
 `ggrep -E -I -winor ssl-?3(\.[0-9]+)? .`
 real 0.11
@@ -4209,7 +4209,7 @@ sys 0.09
 `rg -wic ssl-?3(\.[0-9]+)?`
 real 0.05
 user 0.19
-sys 0.16
+sys 0.15
 
 `ag -wicr ssl-?3(\.[0-9]+)?`
 real 0.04
@@ -4229,17 +4229,17 @@ user 0.03
 sys 0.06
 
 `rg -wil ssl-?3(\.[0-9]+)?`
-real 0.05
+real 0.04
 user 0.19
-sys 0.19
+sys 0.15
 
 `ag -wilr ssl-?3(\.[0-9]+)?`
 real 0.04
 user 0.08
-sys 0.18
+sys 0.16
 
 `ggrep -E -I -wilr ssl-?3(\.[0-9]+)? .`
-real 0.09
+real 0.08
 user 0.04
 sys 0.04
 
@@ -4253,178 +4253,178 @@ sys 0.04
 ### grepping `-n '_(RUN|LIB|NAM)[A-Z_]+'`
 
 `ugrep -n _(RUN|LIB|NAM)[A-Z_]+`
-real 0.12
+real 0.11
 user 0.13
-sys 0.39
+sys 0.37
 
 `rg -n _(RUN|LIB|NAM)[A-Z_]+`
-real 0.27
+real 0.22
 user 0.21
-sys 1.91
+sys 1.62
 
 `ag -nr _(RUN|LIB|NAM)[A-Z_]+`
-real 0.25
+real 0.27
 user 0.28
-sys 1.06
+sys 1.20
 
 `ggrep -E -nr _(RUN|LIB|NAM)[A-Z_]+ .`
-real 0.42
+real 0.41
 user 0.16
-sys 0.26
+sys 0.24
 
 ### grepping `-wn '_(RUN|LIB|NAM)[A-Z_]+'`
 
 `ugrep -wn _(RUN|LIB|NAM)[A-Z_]+`
-real 0.12
+real 0.11
 user 0.13
 sys 0.38
 
 `rg -wn _(RUN|LIB|NAM)[A-Z_]+`
-real 0.31
+real 0.30
 user 0.28
-sys 2.09
+sys 2.06
 
 `ag -wnr _(RUN|LIB|NAM)[A-Z_]+`
-real 0.24
+real 0.22
 user 0.24
-sys 1.14
+sys 1.00
 
 `ggrep -E -wnr _(RUN|LIB|NAM)[A-Z_]+ .`
-real 0.51
-user 0.25
-sys 0.26
+real 0.49
+user 0.24
+sys 0.24
 
 ### grepping `-win '_(RUN|LIB|NAM)[A-Z_]+'`
 
 `ugrep -win _(RUN|LIB|NAM)[A-Z_]+`
-real 0.12
+real 0.11
 user 0.13
-sys 0.38
+sys 0.37
 
 `rg -win _(RUN|LIB|NAM)[A-Z_]+`
-real 0.23
+real 0.25
 user 0.29
-sys 1.60
+sys 1.72
 
 `ag -winr _(RUN|LIB|NAM)[A-Z_]+`
 real 0.22
 user 0.25
-sys 0.97
+sys 1.00
 
 `ggrep -E -winr _(RUN|LIB|NAM)[A-Z_]+ .`
-real 0.56
+real 0.53
 user 0.29
-sys 0.26
+sys 0.24
 
 ### grepping `-wino '_(RUN|LIB|NAM)[A-Z_]+'`
 
 `ugrep -wino _(RUN|LIB|NAM)[A-Z_]+`
-real 0.12
+real 0.11
 user 0.13
-sys 0.38
+sys 0.37
 
 `rg -wino _(RUN|LIB|NAM)[A-Z_]+`
-real 0.29
-user 0.29
-sys 1.95
+real 0.30
+user 0.30
+sys 2.03
 
 `ag -winor _(RUN|LIB|NAM)[A-Z_]+`
-real 0.24
+real 0.22
 user 0.25
-sys 1.12
+sys 1.00
 
 `ggrep -E -winor _(RUN|LIB|NAM)[A-Z_]+ .`
-real 0.56
+real 0.54
 user 0.29
-sys 0.26
+sys 0.24
 
 ### grepping `-wic '_(RUN|LIB|NAM)[A-Z_]+'`
 
 `ugrep -wic _(RUN|LIB|NAM)[A-Z_]+`
-real 0.15
-user 0.12
+real 0.16
+user 0.13
 sys 0.52
 
 `rg -wic _(RUN|LIB|NAM)[A-Z_]+`
-real 0.22
+real 0.23
 user 0.28
-sys 1.54
+sys 1.62
 
 `ag -wicr _(RUN|LIB|NAM)[A-Z_]+`
-real 0.26
+real 0.22
 user 0.24
-sys 1.27
+sys 1.01
 
 `ggrep -E -wicr _(RUN|LIB|NAM)[A-Z_]+ .`
-real 0.50
+real 0.48
 user 0.23
-sys 0.26
+sys 0.24
 
 ### grepping `-wil '_(RUN|LIB|NAM)[A-Z_]+'`
 
 `ugrep -wil _(RUN|LIB|NAM)[A-Z_]+`
 real 0.11
 user 0.09
-sys 0.39
+sys 0.38
 
 `rg -wil _(RUN|LIB|NAM)[A-Z_]+`
-real 0.30
+real 0.23
 user 0.28
-sys 2.02
+sys 1.59
 
 `ag -wilr _(RUN|LIB|NAM)[A-Z_]+`
-real 0.26
+real 0.27
 user 0.24
-sys 1.24
+sys 1.30
 
 `ggrep -E -wilr _(RUN|LIB|NAM)[A-Z_]+ .`
-real 0.48
-user 0.22
-sys 0.26
+real 0.46
+user 0.21
+sys 0.24
 
 ### grepping `-n 'String|Int|Double|Array|Dictionary'`
 
 `ugrep -n String|Int|Double|Array|Dictionary`
 real 0.16
-user 0.19
-sys 0.46
+user 0.20
+sys 0.45
 
 `rg -n String|Int|Double|Array|Dictionary`
-real 0.26
+real 0.27
 user 0.49
-sys 1.54
+sys 1.61
 
 `ag -nr String|Int|Double|Array|Dictionary`
-real 0.85
+real 0.86
 user 1.16
-sys 0.61
+sys 0.65
 
 `ggrep -E -nr String|Int|Double|Array|Dictionary .`
-real 0.54
+real 0.52
 user 0.27
-sys 0.27
+sys 0.25
 
 ### grepping `-wn 'String|Int|Double|Array|Dictionary'`
 
 `ugrep -wn String|Int|Double|Array|Dictionary`
 real 0.14
-user 0.17
-sys 0.44
+user 0.18
+sys 0.43
 
 `rg -wn String|Int|Double|Array|Dictionary`
-real 0.23
+real 0.22
 user 0.57
-sys 1.33
+sys 1.30
 
 `ag -wnr String|Int|Double|Array|Dictionary`
 real 0.49
 user 0.75
-sys 0.63
+sys 0.65
 
 `ggrep -E -wnr String|Int|Double|Array|Dictionary .`
-real 0.66
-user 0.39
-sys 0.27
+real 0.65
+user 0.40
+sys 0.25
 
 ### grepping `-win 'String|Int|Double|Array|Dictionary'`
 
@@ -4435,40 +4435,40 @@ sys 0.44
 
 `rg -win String|Int|Double|Array|Dictionary`
 real 0.23
-user 0.71
-sys 1.27
+user 0.70
+sys 1.24
 
 `ag -winr String|Int|Double|Array|Dictionary`
 real 0.68
 user 1.35
-sys 0.64
+sys 0.61
 
 `ggrep -E -winr String|Int|Double|Array|Dictionary .`
-real 1.54
-user 1.27
-sys 0.28
+real 1.53
+user 1.26
+sys 0.26
 
 ### grepping `-wino 'String|Int|Double|Array|Dictionary'`
 
 `ugrep -wino String|Int|Double|Array|Dictionary`
 real 0.18
 user 0.28
-sys 0.44
+sys 0.43
 
 `rg -wino String|Int|Double|Array|Dictionary`
-real 0.30
-user 1.22
-sys 1.31
+real 0.27
+user 1.23
+sys 1.14
 
 `ag -winor String|Int|Double|Array|Dictionary`
-real 0.57
+real 0.59
 user 1.25
-sys 0.64
+sys 0.71
 
 `ggrep -E -winor String|Int|Double|Array|Dictionary .`
-real 1.78
+real 1.77
 user 1.50
-sys 0.28
+sys 0.26
 
 ### grepping `-wic 'String|Int|Double|Array|Dictionary'`
 
@@ -4479,216 +4479,216 @@ sys 0.50
 
 `rg -wic String|Int|Double|Array|Dictionary`
 real 0.28
-user 0.69
-sys 1.61
+user 0.68
+sys 1.59
 
 `ag -wicr String|Int|Double|Array|Dictionary`
-real 0.24
-user 0.87
-sys 0.77
+real 0.27
+user 0.88
+sys 0.94
 
 `ggrep -E -wicr String|Int|Double|Array|Dictionary .`
-real 1.46
+real 1.44
 user 1.19
-sys 0.27
+sys 0.25
 
 ### grepping `-wil 'String|Int|Double|Array|Dictionary'`
 
 `ugrep -wil String|Int|Double|Array|Dictionary`
-real 0.13
+real 0.12
 user 0.11
-sys 0.45
+sys 0.44
 
 `rg -wil String|Int|Double|Array|Dictionary`
-real 0.20
-user 0.31
-sys 1.30
+real 0.25
+user 0.30
+sys 1.63
 
 `ag -wilr String|Int|Double|Array|Dictionary`
-real 0.24
+real 0.27
 user 0.88
-sys 0.75
+sys 0.97
 
 `ggrep -E -wilr String|Int|Double|Array|Dictionary .`
-real 0.58
+real 0.56
 user 0.31
-sys 0.26
+sys 0.24
 
 ### grepping `-n '(class|struct)\sS[a-z]+T'`
 
 `ugrep -n (class|struct)\sS[a-z]+T`
 real 0.12
 user 0.14
-sys 0.38
+sys 0.37
 
 `rg -n (class|struct)\sS[a-z]+T`
-real 0.27
+real 0.23
 user 0.24
-sys 1.92
+sys 1.66
 
 `ag -nr (class|struct)\sS[a-z]+T`
-real 0.25
-user 0.47
-sys 1.02
+real 0.22
+user 0.48
+sys 0.87
 
 `ggrep -E -nr (class|struct)\sS[a-z]+T .`
-real 0.56
+real 0.54
 user 0.29
-sys 0.26
+sys 0.25
 
 ### grepping `-wn '(class|struct)\sS[a-z]+T'`
 
 `ugrep -wn (class|struct)\sS[a-z]+T`
-real 0.12
+real 0.11
 user 0.14
-sys 0.38
+sys 0.36
 
 `rg -wn (class|struct)\sS[a-z]+T`
-real 0.20
-user 0.51
-sys 1.19
+real 0.19
+user 0.50
+sys 1.17
 
 `ag -wnr (class|struct)\sS[a-z]+T`
-real 0.22
+real 0.25
 user 0.43
-sys 0.87
+sys 1.10
 
 `ggrep -E -wnr (class|struct)\sS[a-z]+T .`
-real 0.63
-user 0.36
-sys 0.26
+real 0.62
+user 0.37
+sys 0.25
 
 ### grepping `-win '(class|struct)\sS[a-z]+T'`
 
 `ugrep -win (class|struct)\sS[a-z]+T`
 real 0.12
 user 0.15
-sys 0.39
+sys 0.37
 
 `rg -win (class|struct)\sS[a-z]+T`
-real 0.24
-user 1.00
-sys 1.12
+real 0.22
+user 1.01
+sys 1.00
 
 `ag -winr (class|struct)\sS[a-z]+T`
 real 0.26
-user 0.55
-sys 1.02
+user 0.56
+sys 1.04
 
 `ggrep -E -winr (class|struct)\sS[a-z]+T .`
-real 0.81
+real 0.80
 user 0.54
-sys 0.27
+sys 0.25
 
 ### grepping `-wino '(class|struct)\sS[a-z]+T'`
 
 `ugrep -wino (class|struct)\sS[a-z]+T`
 real 0.12
 user 0.15
-sys 0.39
+sys 0.37
 
 `rg -wino (class|struct)\sS[a-z]+T`
-real 0.23
-user 1.02
-sys 1.02
+real 0.21
+user 1.01
+sys 0.91
 
 `ag -winor (class|struct)\sS[a-z]+T`
-real 0.24
+real 0.22
 user 0.55
-sys 0.95
+sys 0.83
 
 `ggrep -E -winor (class|struct)\sS[a-z]+T .`
-real 0.82
-user 0.55
-sys 0.27
+real 0.80
+user 0.54
+sys 0.25
 
 ### grepping `-wic '(class|struct)\sS[a-z]+T'`
 
 `ugrep -wic (class|struct)\sS[a-z]+T`
-real 0.16
+real 0.15
 user 0.15
-sys 0.52
+sys 0.50
 
 `rg -wic (class|struct)\sS[a-z]+T`
-real 0.26
+real 0.23
 user 1.00
-sys 1.26
+sys 1.03
 
 `ag -wicr (class|struct)\sS[a-z]+T`
-real 0.25
-user 0.54
-sys 1.02
+real 0.22
+user 0.53
+sys 0.83
 
 `ggrep -E -wicr (class|struct)\sS[a-z]+T .`
-real 0.75
+real 0.74
 user 0.48
-sys 0.27
+sys 0.25
 
 ### grepping `-wil '(class|struct)\sS[a-z]+T'`
 
 `ugrep -wil (class|struct)\sS[a-z]+T`
 real 0.11
 user 0.11
-sys 0.39
+sys 0.38
 
 `rg -wil (class|struct)\sS[a-z]+T`
 real 0.22
 user 0.96
-sys 1.05
+sys 1.02
 
 `ag -wilr (class|struct)\sS[a-z]+T`
-real 0.22
+real 0.23
 user 0.54
-sys 0.85
+sys 0.87
 
 `ggrep -E -wilr (class|struct)\sS[a-z]+T .`
-real 0.71
-user 0.44
-sys 0.26
+real 0.70
+user 0.45
+sys 0.25
 
 ### grepping `-n 'for\s[a-z]+\sin'`
 
 `ugrep -n for\s[a-z]+\sin`
-real 0.14
-user 0.16
-sys 0.44
+real 0.13
+user 0.15
+sys 0.42
 
 `rg -n for\s[a-z]+\sin`
-real 0.21
+real 0.23
 user 0.19
-sys 1.42
+sys 1.58
 
 `ag -nr for\s[a-z]+\sin`
-real 0.32
+real 0.31
 user 0.43
-sys 0.90
+sys 0.86
 
 `ggrep -E -nr for\s[a-z]+\sin .`
-real 0.52
+real 0.50
 user 0.25
-sys 0.26
+sys 0.25
 
 ### grepping `-wn 'for\s[a-z]+\sin'`
 
 `ugrep -wn for\s[a-z]+\sin`
-real 0.13
+real 0.12
 user 0.14
-sys 0.40
+sys 0.38
 
 `rg -wn for\s[a-z]+\sin`
-real 0.22
-user 0.22
-sys 1.60
+real 0.33
+user 0.23
+sys 2.24
 
 `ag -wnr for\s[a-z]+\sin`
-real 0.29
-user 0.37
-sys 1.16
+real 0.26
+user 0.36
+sys 0.93
 
 `ggrep -E -wnr for\s[a-z]+\sin .`
-real 0.52
+real 0.51
 user 0.26
-sys 0.26
+sys 0.25
 
 ### grepping `-win 'for\s[a-z]+\sin'`
 
@@ -4698,31 +4698,31 @@ user 0.14
 sys 0.39
 
 `rg -win for\s[a-z]+\sin`
-real 0.25
+real 0.23
 user 0.79
-sys 1.32
+sys 1.18
 
 `ag -winr for\s[a-z]+\sin`
-real 0.29
+real 0.26
 user 0.36
-sys 1.11
+sys 0.97
 
 `ggrep -E -winr for\s[a-z]+\sin .`
-real 0.71
+real 0.68
 user 0.43
-sys 0.27
+sys 0.25
 
 ### grepping `-wino 'for\s[a-z]+\sin'`
 
 `ugrep -wino for\s[a-z]+\sin`
 real 0.12
 user 0.14
-sys 0.40
+sys 0.38
 
 `rg -wino for\s[a-z]+\sin`
-real 0.23
-user 0.77
-sys 1.20
+real 0.22
+user 0.79
+sys 1.15
 
 `ag -winor for\s[a-z]+\sin`
 real 0.26
@@ -4730,53 +4730,53 @@ user 0.36
 sys 0.92
 
 `ggrep -E -winor for\s[a-z]+\sin .`
-real 0.71
+real 0.69
 user 0.44
-sys 0.27
+sys 0.25
 
 ### grepping `-wic 'for\s[a-z]+\sin'`
 
 `ugrep -wic for\s[a-z]+\sin`
 real 0.16
-user 0.13
+user 0.14
 sys 0.52
 
 `rg -wic for\s[a-z]+\sin`
-real 0.26
-user 0.77
-sys 1.36
+real 0.22
+user 0.78
+sys 1.14
 
 `ag -wicr for\s[a-z]+\sin`
 real 0.22
 user 0.30
-sys 0.95
+sys 0.97
 
 `ggrep -E -wicr for\s[a-z]+\sin .`
-real 0.64
+real 0.63
 user 0.37
-sys 0.27
+sys 0.25
 
 ### grepping `-wil 'for\s[a-z]+\sin'`
 
 `ugrep -wil for\s[a-z]+\sin`
 real 0.11
-user 0.09
-sys 0.40
+user 0.10
+sys 0.38
 
 `rg -wil for\s[a-z]+\sin`
-real 0.24
+real 0.23
 user 0.70
-sys 1.39
+sys 1.26
 
 `ag -wilr for\s[a-z]+\sin`
-real 0.24
+real 0.23
 user 0.30
-sys 1.09
+sys 1.01
 
 `ggrep -E -wilr for\s[a-z]+\sin .`
-real 0.58
+real 0.56
 user 0.31
-sys 0.26
+sys 0.25
 
 ~/Projects/ugrep/benchmarks
 
@@ -4808,7 +4808,7 @@ sys 0.01
 `rg -zwin landsnail corpi/enwik8.bz2`
 real 2.00
 user 2.10
-sys 0.03
+sys 0.02
 
 `ag -zwin landsnail corpi/enwik8.bz2`
 **ERROR!**
@@ -4817,11 +4817,11 @@ sys 0.03
 
 `ugrep -zc landsnail corpi/enwik8.bz2`
 real 1.98
-user 1.98
+user 1.99
 sys 0.01
 
 `rg -zc landsnail corpi/enwik8.bz2`
-real 2.00
+real 1.99
 user 2.04
 sys 0.02
 
@@ -4838,7 +4838,7 @@ sys 0.01
 `rg -zwic landsnail corpi/enwik8.bz2`
 real 2.00
 user 2.10
-sys 0.03
+sys 0.02
 
 `ag -zwic landsnail corpi/enwik8.bz2`
 **ERROR!**
@@ -4852,7 +4852,7 @@ sys 0.00
 
 `rg -zl landsnail corpi/enwik8.bz2`
 real 0.27
-user 0.28
+user 0.27
 sys 0.00
 
 `ag -zl landsnail corpi/enwik8.bz2`
@@ -4914,7 +4914,7 @@ user 0.31
 sys 0.01
 
 `rg -zc landsnail corpi/enwik8.gz`
-real 0.30
+real 0.29
 user 0.34
 sys 0.01
 
@@ -4977,7 +4977,7 @@ user 0.04
 sys 0.01
 
 `rg -z landsnail corpi/enwik8.lz4`
-real 0.12
+real 0.11
 user 0.10
 sys 0.01
 
@@ -5065,13 +5065,13 @@ sys 0.00
 ### grepping `-z 'landsnail'`
 
 `ugrep -z landsnail corpi/enwik8.xz`
-real 1.09
-user 1.10
+real 1.08
+user 1.09
 sys 0.01
 
 `rg -z landsnail corpi/enwik8.xz`
 real 1.11
-user 1.17
+user 1.16
 sys 0.03
 
 `ag -z landsnail corpi/enwik8.xz`
@@ -5080,8 +5080,8 @@ sys 0.03
 ### grepping `-zwin 'landsnail'`
 
 `ugrep -zwin landsnail corpi/enwik8.xz`
-real 1.09
-user 1.10
+real 1.08
+user 1.09
 sys 0.01
 
 `rg -zwin landsnail corpi/enwik8.xz`
@@ -5130,7 +5130,7 @@ user 0.15
 sys 0.00
 
 `rg -zl landsnail corpi/enwik8.xz`
-real 0.15
+real 0.16
 user 0.16
 sys 0.00
 
@@ -5275,7 +5275,7 @@ sys 0.03
 `ugrep -zc FIXME|TODO corpi/openssl-3.1.2.zip`
 real 0.20
 user 0.18
-sys 0.05
+sys 0.04
 
 `rg -zc FIXME|TODO corpi/openssl-3.1.2.zip`
 **ERROR!**
@@ -5286,7 +5286,7 @@ sys 0.05
 ### grepping `-zwic 'FIXME|TODO'`
 
 `ugrep -zwic FIXME|TODO corpi/openssl-3.1.2.zip`
-real 0.20
+real 0.19
 user 0.17
 sys 0.04
 
@@ -5356,7 +5356,7 @@ sys 0.03
 `ugrep -zc FIXME|TODO corpi/openssl-3.1.2.tar`
 real 0.08
 user 0.04
-sys 0.05
+sys 0.04
 
 `rg -zc FIXME|TODO corpi/openssl-3.1.2.tar`
 **ERROR!**
@@ -5369,7 +5369,7 @@ sys 0.05
 `ugrep -zwic FIXME|TODO corpi/openssl-3.1.2.tar`
 real 0.08
 user 0.04
-sys 0.05
+sys 0.04
 
 `rg -zwic FIXME|TODO corpi/openssl-3.1.2.tar`
 **ERROR!**
