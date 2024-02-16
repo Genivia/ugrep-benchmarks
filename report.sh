@@ -45,7 +45,7 @@ the `install.sh` script requires the following compression utilities:
 
 - timing results are collected with the standard 10ms resolution; a lower resolution is unusable and a higher resolution is unreliable due to the natural timing variations observed in the system
 - all timed runs are warm runs, cold runs are not timed
-- all timed runs of ugrep are performed without a .ugrep configuration file by using the ugrep batch command
+- all timed runs of ugrep are performed without a .ugrep configuration file by using the ugrep command
 - all regex patterns tested are fully compliant with the common ERE standard syntax; a failure may occur if a grep tool fails to parse ERE (for example, ripgrep failing to parse `[][a-z]` in URL pattern testing, when `[\[\]a-z]` works for ripgrep but this is not compliant so GNU grep fails)
 
 ## important notes on grep tool differences that impact the results
@@ -54,12 +54,7 @@ the `install.sh` script requires the following compression utilities:
 - **ripgrep does not output 0 matches for option `-c`, whereas grep and ugrep output 0 matches as expected to list all files thereby making the performance of option `-c` incomparable for recursive searches** (note: ugrep option `-m1,` (`--min-count=1`) skips zero matches but is not used in this benchmark)
 - **ripgrep does not search tar file contents**, instead it may report *binary file matches (found "\0" byte around offset N)* without exiting with an error, so we report an error instead
 - **ugrep option `-z` is more powerful than just internally decompressing a single file in a buffer to search,** it searches nested archives up to nesting depth `--zmax` (1 by default) by spawning one or more decompression theads; none of the other grep tools can search compressed tar files, nested archives and compressed files stored within archives
-- different versions and implementations of **the same compression library may have different performance characteristics**, notably zlib (gz); the performance is mostly determined by the compression library and is not attributable to the grep tool
-
-## important notes on pending ugrep performance improvements
-
-- ugrep context options `-ABC` are suboptimal, because of double buffering overhead (input buffer and context buffer), which will be optimized soon in a future release
-- ugrep patterns with leading `+` repetitions that match "anything", such as `\w+foo` are quite slow, because of pattern search backtracking, which will be optimized in a future release
+- **different versions and implementations of the same compression library linked with ugrep may have different performance characteristics**, notably zlib (gz); the performance is mostly determined by the compression library and is not attributable to the grep tool
 END
 
 echo

@@ -121,7 +121,8 @@ echo
 echo "## large text file search"
 echo
 
-for REGEX in 'rol' 'the' 'cycles|semigroups' 'ro[a-z]*ds' 'ab(cd?)?' 'x*y*z*' \
+for REGEX in 'rol' 'the' 'cycles|semigroups' 'ro[a-z]*ds' 'r[a-z]*st' \
+      '[A-Z][a-z]+ny' '[A-Z][a-z]{11}ny' '\w+ny' 'ab(cd?)?' 'x*y*z*' \
       '(19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2}' \
       '(https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+' \
       '^={2,4}[^=].*' \
