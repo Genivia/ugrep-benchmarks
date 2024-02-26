@@ -42,6 +42,7 @@ the `install.sh` script requires the following compression utilities:
 
 ## important notes on grep tool differences that impact the results
 
+- **Unicode regex pattern matching is used**, except for GNU grep that does not match Unicode patterns, i.e. GNU grep patterns `.` (any char) and `\w` (word char) match ASCII.
 - **ripgrep and silver searcher skip binary files by default, whereas grep and ugrep do not and use option `-I` to skip binary files;** we include option `-I` in recursive searches for a fair performance comparison
 - **ripgrep does not output 0 matches for option `-c`, whereas grep and ugrep output 0 matches as expected to list all files thereby making the performance of option `-c` incomparable for recursive searches** (note: ugrep option `-m1,` (`--min-count=1`) skips zero matches but is not used in this benchmark)
 - **ripgrep does not search tar file contents**, instead it may report *binary file matches (found "\0" byte around offset N)* without exiting with an error, so we report an error instead
