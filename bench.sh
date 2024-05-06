@@ -125,7 +125,7 @@ for REGEX in 'rol' 'the' 'cycles|semigroups' 'ro[a-z]*ds' 'r[a-z]*st' \
       '[A-Z][a-z]+ny' '[A-Z][a-z]{11}ny' '\w+ny' 'ab(cd?)?' 'x*y*z*' \
       '(19|20)[0-9]{2}/(0[1-9]|1[012])|(0[1-9]|1[012])/(19|20)[0-9]{2}' \
       '(https?://|www\.)[-a-zA-Z0-9@:%._+~#=]{1,253}\.[-a-zA-Z0-9]{2,}\.[][a-zA-Z0-9()@:%_+.~#?&/=\-]+' \
-      '^={2,4}[^=].*' \
+      '[a-z]+-[a-z]+' \
       '' '^$' ; do
   for OPTS in '' '-n' '-no' '-wn' '-win' '-wino' '-c' '-wic' '-l' '-wil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
@@ -183,8 +183,8 @@ echo
 echo "## large text file search with context"
 echo
 
-for REGEX in '^$' 'Sherlock|Holmes' ; do
-  for OPTS in '-A1' '-B1' '-C1' '-winA1' '-winB1' '-winC1' ; do
+for REGEX in '^$' 'begin|end' ; do
+  for OPTS in '-nA9' '-nB9' '-nC9' '-winA999' '-winB999' '-winC999' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
     run $UG $OPTS "$REGEX" $TEXT
@@ -198,7 +198,7 @@ echo
 echo "## large long lines JSON file search"
 echo
 
-for REGEX in '99' 'abc[a-z0-9]+' ; do
+for REGEX in 'abc[a-z0-9]+' ; do
   for OPTS in '' '-n' '-no' '-wn' '-win' '-wino' '-c' '-wic' '-l' '-wil' ; do
     echo '### grepping `'"$OPTS '$REGEX'"'`'
     echo
