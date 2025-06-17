@@ -43,6 +43,7 @@ the `install.sh` script requires the following compression utilities:
 
 **WARNING** performance results are meaningless when the host machine executes other tasks that load the CPU; quit all running applications first, disconnect from the network if possible to halt background process networking activity, and check for running background processes (with e.g. `top`) before running `./bench.sh`
 
+- ugrep is compiled with Clang for performance, i.e. results may differ when ugrep is compiled with the GNU compiler
 - timing results are collected with the standard 10ms resolution; a lower resolution is unusable and a higher resolution is unreliable due to the natural timing variations observed in the system
 - all timed runs are warm runs, cold runs are not timed
 - all timed runs of ugrep are performed without a .ugrep configuration file by using the ugrep command
